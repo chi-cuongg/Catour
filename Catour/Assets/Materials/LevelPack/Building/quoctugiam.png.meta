@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: quoctugiam_0
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 1213
+        width: 484
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ae5e0b4505853408cf817535def843
+      internalID: -1937484468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_1
+      rect:
+        serializedVersion: 2
+        x: 2725
+        y: 1141
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28848a5344b67b447886cd21f11a5551
+      internalID: -1702124462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 839
+        width: 229
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592b3f6ffd15db54595a7a73460d19a2
+      internalID: 1512358499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_3
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 839
+        width: 460
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c359b3dab8a6a3f4aa04ebce738d3569
+      internalID: -1765364086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_4
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 13
+        width: 661
+        height: 922
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e83e03e17f1cc479442af6192ed184
+      internalID: 1149087803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_5
+      rect:
+        serializedVersion: 2
+        x: 2683
+        y: 856
+        width: 226
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2922c8036c8268a419f7d597c6caf25f
+      internalID: -2115219803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_6
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 670
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b136ce69a2d5044b0c22db601ec201
+      internalID: 1668901182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_7
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 552
+        width: 59
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f936a77bb98dd24581d718f3c749c36
+      internalID: 1012256780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_8
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 609
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da260a66ad358ed4a9beacccdd05a7bf
+      internalID: -512185132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_9
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 424
+        width: 460
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9184673d8695a9478a6e6fe1e2f17d5
+      internalID: 1047475237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_10
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 405
+        width: 186
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfd2060f8a57f545b171af8997558cd
+      internalID: -1048892333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quoctugiam_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 35
+        width: 908
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399c0c0fbff6c2d47aa17edaadf216ae
+      internalID: -1673651803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +371,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      quoctugiam_0: -1937484468
+      quoctugiam_1: -1702124462
+      quoctugiam_10: -1048892333
+      quoctugiam_11: -1673651803
+      quoctugiam_2: 1512358499
+      quoctugiam_3: -1765364086
+      quoctugiam_4: 1149087803
+      quoctugiam_5: -2115219803
+      quoctugiam_6: 1668901182
+      quoctugiam_7: 1012256780
+      quoctugiam_8: -512185132
+      quoctugiam_9: 1047475237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
