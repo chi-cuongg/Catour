@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float idleTime = 0f;
     private bool isIdle = false;
     private const float idleThreshold = 5f;
+    private bool Control = true;
 
 
     // Start is called before the first frame update
@@ -60,9 +61,20 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
+    public void disableControl(){
+        Control = false;
+    }
+
+    public bool isControl(){
+        return Control;
+    }
+
     void FixedUpdate()
     {
-        controller.Move(horizontalMove, false, jump); 
+        if(Control){
+            controller.Move(horizontalMove, false, jump); 
         jump = false;
+        }
     }
+    
 }
