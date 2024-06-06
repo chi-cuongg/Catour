@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("IsJumping", true);
         }
 
-        if(Mathf.Abs(horizontalMove) > 0)
+        if(Mathf.Abs(horizontalMove) > 0 || jump == true)
         {
             idleTime = 0f;
             isIdle = false;
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Control){
             controller.Move(horizontalMove, false, jump); 
-        jump = false;
+            jump = false;
         }
     }
     
