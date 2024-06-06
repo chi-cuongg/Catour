@@ -886,7 +886,6 @@ GameObject:
   m_Component:
   - component: {fileID: 578465951}
   - component: {fileID: 578465953}
-  - component: {fileID: 578465952}
   - component: {fileID: 578465954}
   - component: {fileID: 578465955}
   m_Layer: 0
@@ -911,14 +910,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 825231520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &578465952
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578465950}
-  m_Enabled: 1
 --- !u!20 &578465953
 Camera:
   m_ObjectHideFlags: 0
@@ -997,9 +988,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c2a9f6fef8c904d927a8ceb9b1dc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomSpeed: 10
+  zoomSpeed: 20
   minZoom: 20
-  maxZoom: 100
+  maxZoom: 120
 --- !u!1 &673695334
 GameObject:
   m_ObjectHideFlags: 0
