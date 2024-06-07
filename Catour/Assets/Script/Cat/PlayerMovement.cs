@@ -34,8 +34,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            jump = true;
-            animator.SetBool("IsJumping", true);
+            if(controller.groundCheck()){
+                jump = true;
+                animator.SetBool("IsJumping", true);
+            }
         }
 
         if(Mathf.Abs(horizontalMove) > 0 || jump == true)

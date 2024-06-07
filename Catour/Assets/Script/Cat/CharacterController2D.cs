@@ -132,6 +132,10 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+	public bool groundCheck(){
+		return m_Grounded;
+	}
+
 
 	private void Flip()
 	{
