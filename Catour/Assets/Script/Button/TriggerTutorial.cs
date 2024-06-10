@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class TriggerTutorial : MonoBehaviour
 {
+    public ButtonTutorial tutorial;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,9 @@ public class Button : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D other) {
+        tutorial.Trigger(other.gameObject);
+        gameObject.SetActive(false);
     }
 }
