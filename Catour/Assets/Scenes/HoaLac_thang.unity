@@ -2089,17 +2089,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 472231189145293379, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: runSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1853580152530155741, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8123854a5f8822241afe26af56877aa3, type: 2}
+    - target: {fileID: 3815840715338349033, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_AirControl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815840715338349033, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844964737560101743, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Size.x
+      value: 0.18335773
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844964737560101743, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Size.y
+      value: 0.037660964
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844964737560101743, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0029662594
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844964737560101743, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.01700683
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844964737560101743, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4971775630009072612, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6064395974836287043, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122183705426977257, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.024
+      objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.163
       objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.17
+      value: -9.27
       objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2137,8 +2181,58 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 7573695425036984957, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 27.498047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 27.498047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 27.498047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0279
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.208
+      objectReference: {fileID: 0}
+    - target: {fileID: 8238963901761022091, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_AirControl
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_GroundCheck
+      value: 
+      objectReference: {fileID: 991987129}
+    - target: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 726478974553079471, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 6969849762972964374, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       insertIndex: -1
