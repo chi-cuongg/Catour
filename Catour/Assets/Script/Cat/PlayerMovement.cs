@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
-    
-    public float runSpeed = 2f;
+
+    public float runSpeed = 1f;
 
     float horizontalMove = 0f;
     bool jump = false;
@@ -16,12 +16,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isIdle = false;
     private const float idleThreshold = 5f;
     private bool Control = true;
+    //private bool isGrounded = true;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        controller.OnLandEvent.AddListener(OnLanding);
     }
 
     // Update is called once per frame
@@ -29,16 +30,22 @@ public class PlayerMovement : MonoBehaviour
     {
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        
+
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && controller.Grounded)
         {
             jump = true;
+            Debug.Log("Jump button pressed");
             animator.SetBool("IsJumping", true);
+            //isGrounded = false;
+            //Debug.Log("Set IsJumping to true, isGrounded: " + isGrounded);
+
         }
 
-        if(Mathf.Abs(horizontalMove) > 0 || jump == true)
+
+
+        if (Mathf.Abs(horizontalMove) > 0 || jump )
         {
             idleTime = 0f;
             isIdle = false;
@@ -46,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             idleTime += Time.deltaTime;
-            if (idleTime >= idleThreshold) 
+            if (idleTime >= idleThreshold)
             {
                 isIdle = true;
             }
@@ -58,23 +65,37 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
+        Debug.Log("Landed");
+        //isGrounded = true;
         animator.SetBool("IsJumping", false);
+        //Debug.Log("Set IsJumping to false, isGrounded: " + isGrounded);
     }
 
-    public void disableControl(){
+
+    public void disableControl()
+    {
         Control = false;
     }
 
-    public bool isControl(){
+    public bool isControl()
+    {
         return Control;
     }
 
     void FixedUpdate()
     {
-        if(Control){
-            controller.Move(horizontalMove, false, jump); 
+        if (Control)
+        {
+            Debug.Log("Jumping in FixedUpdate");
+            controller.Move(horizontalMove, false, jump);
             jump = false;
         }
+        //else
+        //{
+        //    //Debug.Log("FixedUpdate: Control is false");
+        //    controller.Move(horizontalMove, false, false);
+        //}
+
     }
-    
+
 }
