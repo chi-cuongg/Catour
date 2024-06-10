@@ -14,7 +14,7 @@ public class BusStop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerStay2D(Collider2D other){
