@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Bus : MonoBehaviour
 {
-    public GameObject busStop;
+    private GameObject busStop;
     public float speed;
     public float waitingTime;
     private float waitedTime;
@@ -14,13 +14,13 @@ public class Bus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        busStop = GameObject.FindGameObjectWithTag("Bus Stop");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x >= busStop.transform.position.x + 6){
+        if(transform.position.x >= busStop.transform.position.x - 0.3){
             Move();
         }else{
             waitedTime += Time.deltaTime;

@@ -23,7 +23,6 @@ public class ButtonTutorial : MonoBehaviour
     void Update()
     {
         if(step >= 0 && step < key.Length){
-            Debug.Log(KeyButton[step]);
             Destroy(GameObject.FindWithTag("Button"));
             Instantiate(KeyButton[step], cat.transform.position + new Vector3(0, 1.5f, 0), KeyButton[step].transform.rotation);
             if(Input.GetKey(key[step])){ 
