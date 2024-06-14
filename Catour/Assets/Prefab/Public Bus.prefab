@@ -143,7 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf46dbecea1afe439d202a34577e27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  busStop: {fileID: 342136726966424400, guid: 3e5b3d7ffe03fde45aed53857566f404, type: 3}
-  speed: 10
+  speed: 5
   waitingTime: 2
   Scene: 2
