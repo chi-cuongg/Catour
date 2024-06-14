@@ -48,7 +48,7 @@ public class Music : MonoBehaviour
                     if(Input.GetKeyDown(KeyCode.A)){
                         Destroy(other);
                         pointSet(2);
-                    }else if(!Input.anyKeyDown){
+                    }else if(Input.anyKeyDown){
                         Destroy(other);
                         pointSet(0);
                     }break;
