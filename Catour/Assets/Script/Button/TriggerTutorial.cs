@@ -19,9 +19,7 @@ public class TriggerTutorial : MonoBehaviour
     }
 
     private void OnTriggerStay2D(Collider2D other) {
-        Debug.Log(other);
         if(Input.GetKeyDown(KeyCode.F)){
-            Debug.Log("Hello");
             tutorial.gameObject.SetActive(true);
         }
     }

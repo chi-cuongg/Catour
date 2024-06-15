@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UI.unity
+    path: Assets/Scenes/UI/UI.unity
     guid: 38a28e8b70d403746a4afb98f87c9f99
   - enabled: 1
-    path: Assets/Scenes/HoaLac.unity
+    path: Assets/Scenes/Main/HoaLac.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/HoaLac_cuong.unity
+    path: Assets/Scenes/Main/HoaLac_cuong.unity
     guid: 87742584139cb634282953334011f683
   - enabled: 1
-    path: Assets/Scenes/Hanoi.unity
+    path: Assets/Scenes/Main/Hanoi.unity
     guid: 4443c4ecd31586f448a58709c19527d1
   m_configObjects: {}
