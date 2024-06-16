@@ -9,7 +9,7 @@ public class SpawnObstacles : MonoBehaviour
 {
     public List<GameObject> Obstacles;
     public float spawnMax;
-    public bool gameOver = false;
+    private bool gameOver = false;
     public TextMeshProUGUI gameOverText;
     // Start is called before the first frame update
     void Start()
