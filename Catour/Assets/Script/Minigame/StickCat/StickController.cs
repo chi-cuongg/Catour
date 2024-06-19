@@ -9,7 +9,6 @@ public class StickController : MonoBehaviour
     private bool isExtending = false;
     private bool isRotating = false;
     private bool control = true;
-    private Quaternion targetRotation = Quaternion.Euler(0, 0, -87);
     private Vector3 axisPoint;
     private SpawnObject spawn;
     private GameObject cat;
@@ -49,12 +48,18 @@ public class StickController : MonoBehaviour
             if (isRotating)
             {
                 transform.RotateAround(axisPoint, Vector3.back, rotateSpeed * Time.deltaTime);
-                if (transform.rotation.z <= targetRotation.z)
-                {
-                    isRotating = false;
-                    spawn.Next();
-                    cat.GetComponent<Movement>().enabled = true;
-                }
             }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.CompareTag("Square")){
+            Move();
+        }
+    }
+
+    private void Move(){
+        isRotating = false;
+        spawn.Next();
+        cat.GetComponent<Movement>().Move(this.gameObject);
     }
 }

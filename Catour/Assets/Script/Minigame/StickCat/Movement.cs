@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private GameObject Object;
     public Animator animator;
     public SpawnObject spawn;
     private float move;
@@ -20,10 +21,15 @@ public class Movement : MonoBehaviour
         transform.Translate(Vector3.right * move);
         move = speed * Time.deltaTime;
         animator.SetFloat("Speed", Mathf.Abs(move));
+        if(transform.position.x - (GetComponent<BoxCollider2D>().size.x * transform.localScale.x)/2 >= (Object.transform.position.x + (((Object.GetComponent<BoxCollider2D>().size.x) * Object.transform.localScale.y))/2)){
+            this.enabled = false;
+            animator.SetFloat("Speed", 0);
+            spawn.setStick();
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        this.enabled = false;
-        animator.SetFloat("Speed", 0);
+    public void Move(GameObject Object) {
+        this.enabled = true;
+        this.Object = Object;
     }
 }

@@ -7,21 +7,24 @@ using UnityEngine.UIElements;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject Object;
+    private GameObject Object1;
     private GameObject Object2;
     private bool nextObject = true;
     private float position = 0;
     private bool gameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
         Spawn();
+        Object2.transform.GetChild(1).gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
         if(nextObject){
-            Object2.GetComponentInChildren<StickController>().enabled = true;
+            Object1 = Object2;
             position += Random.Range(4, 6);
             Spawn();
             nextObject = false;
@@ -42,5 +45,9 @@ public class SpawnObject : MonoBehaviour
 
     public bool isGameOver(){
         return gameOver;
+    }
+
+    public void setStick(){
+        Object1.transform.GetChild(1).gameObject.SetActive(true);
     }
 }
