@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TriggerTutorial : MonoBehaviour
 {
-    public ButtonTutorial tutorial;
+    public Canvas tutorial;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,10 @@ public class TriggerTutorial : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        tutorial.Trigger(other.gameObject);
-        gameObject.SetActive(false);
+
+    private void OnTriggerStay2D(Collider2D other) {
+        if(Input.GetKeyDown(KeyCode.F)){
+            tutorial.gameObject.SetActive(true);
+        }
     }
 }
