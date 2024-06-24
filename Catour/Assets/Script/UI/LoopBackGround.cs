@@ -12,7 +12,7 @@ public class LoopBackGround : MonoBehaviour
     void Start()
     {
         start = transform.position;
-        width = GetComponent<BoxCollider2D>().size.x / 2;
+        width = GetComponent<BoxCollider2D>().size.x * transform.localScale.x / 2;
         spawn = FindAnyObjectByType<SpawnObstacles>();
     }
 

@@ -2,22 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class DinosaurRun : MonoBehaviour
 {
+    public SpawnObstacles spawn;
     public CharacterController2D controller;
     public Animator animator;
-    
     public float runSpeed = 2f;
-
-    float horizontalMove = 0f;
     bool jump = false;
-
-    private float idleTime = 0f;
-    private bool isIdle = false;
     private const float idleThreshold = 5f;
     private bool Control = true;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +20,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        if(spawn.isGameOver()) this.enabled = false;
+        animator.SetFloat("Speed", Mathf.Abs(runSpeed));
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -39,23 +30,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("IsJumping", true);
             }
         }
-
-        if(Mathf.Abs(horizontalMove) > 0 || jump == true)
-        {
-            idleTime = 0f;
-            isIdle = false;
-        }
-        else
-        {
-            idleTime += Time.deltaTime;
-            if (idleTime >= idleThreshold) 
-            {
-                isIdle = true;
-            }
-        }
-
-        animator.SetBool("IsIdle", isIdle);
-        animator.SetFloat("IdleTime", idleTime);
     }
 
     public void OnLanding()
@@ -63,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsJumping", false);
     }
 
-    public void enableControl(bool Control){
-        this.Control = Control;
+    public void disableControl(){
+        Control = false;
     }
 
     public bool isControl(){
@@ -74,9 +48,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if(Control){
-            controller.Move(horizontalMove, false, jump); 
+            controller.Move(runSpeed, false, jump); 
             jump = false;
         }
     }
-    
 }
