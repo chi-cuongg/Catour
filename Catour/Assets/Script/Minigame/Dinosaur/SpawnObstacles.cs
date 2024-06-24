@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class SpawnObstacles : MonoBehaviour
 {
     public List<GameObject> Obstacles;
+    public float spawnMin;
     public float spawnMax;
     private bool gameOver = false;
     public TextMeshProUGUI gameOverText;
@@ -25,7 +26,7 @@ public class SpawnObstacles : MonoBehaviour
 
     IEnumerator Spawn(){
         while(!gameOver){
-            float spawnRate = Random.Range(1, spawnMax);
+            float spawnRate = Random.Range(spawnMin, spawnMax);
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, Obstacles.Count);
             Instantiate(Obstacles[index], new Vector3(14, -3.12f + (Obstacles[index].GetComponent<BoxCollider2D>().size.y)/2, 0), Obstacles[index].transform.rotation);

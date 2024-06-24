@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         transform.Translate(Vector3.right * move);
         move = speed * Time.deltaTime;
         animator.SetFloat("Speed", Mathf.Abs(move));
-        if(transform.position.x - (GetComponent<BoxCollider2D>().size.x * transform.localScale.x)/2 >= (Object.transform.position.x + (((Object.GetComponent<BoxCollider2D>().size.x) * Object.transform.localScale.y))/2)){
+        if(transform.position.x - (GetComponent<BoxCollider2D>().size.x * transform.localScale.x)/2 - 0.1f >= (Object.transform.position.x + (((Object.GetComponent<BoxCollider2D>().size.x) * Object.transform.localScale.y))/2)){
             this.enabled = false;
             animator.SetFloat("Speed", 0);
             spawn.setStick();
