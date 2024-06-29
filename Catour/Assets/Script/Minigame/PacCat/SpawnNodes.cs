@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnNode : MonoBehaviour
+public class SpawnNodes : MonoBehaviour
 {
     int numToSpawn = 25;
     public float spawnOffSet = 0.3f;
