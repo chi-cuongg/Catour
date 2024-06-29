@@ -7,6 +7,7 @@ TagManager:
   - Button
   - Bus Stop
   - Square
+  - Node
   layers:
   - Default
   - TransparentFX
