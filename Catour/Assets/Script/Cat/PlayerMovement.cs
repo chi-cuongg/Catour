@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Controller Control;
     public CharacterController2D controller;
     public Animator animator;
-    
     public float runSpeed = 2f;
-
     float horizontalMove = 0f;
     bool jump = false;
-
     private float idleTime = 0f;
     private bool isIdle = false;
     private const float idleThreshold = 5f;
-    private bool Control = true;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -27,56 +22,47 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Control.isControl()){
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            if(controller.groundCheck()){
-                jump = true;
-                animator.SetBool("IsJumping", true);
-            }
-        }
-
-        if(Mathf.Abs(horizontalMove) > 0 || jump == true)
-        {
-            idleTime = 0f;
-            isIdle = false;
-        }
-        else
-        {
-            idleTime += Time.deltaTime;
-            if (idleTime >= idleThreshold) 
+            if (Input.GetButtonDown("Jump"))
             {
-                isIdle = true;
+                if(controller.groundCheck()){
+                    jump = true;
+                    animator.SetBool("IsJumping", true);
+                }
             }
-        }
 
-        animator.SetBool("IsIdle", isIdle);
-        animator.SetFloat("IdleTime", idleTime);
+            if(Mathf.Abs(horizontalMove) > 0 || jump == true)
+            {
+                idleTime = 0f;
+                isIdle = false;
+            }
+            else
+            {
+                idleTime += Time.deltaTime;
+                if (idleTime >= idleThreshold) 
+                {
+                    isIdle = true;
+                }
+            }
+
+            animator.SetBool("IsIdle", isIdle);
+            animator.SetFloat("IdleTime", idleTime);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if(Control.isControl()){
+            controller.Move(horizontalMove, jump);
+            jump = false;
+        }
     }
 
     public void OnLanding()
     {
         animator.SetBool("IsJumping", false);
     }
-
-    public void enableControl(bool Control){
-        this.Control = Control;
-    }
-
-    public bool isControl(){
-        return Control;
-    }
-
-    void FixedUpdate()
-    {
-        if(Control){
-            controller.Move(horizontalMove, false, jump); 
-            jump = false;
-        }
-    }
-    
 }

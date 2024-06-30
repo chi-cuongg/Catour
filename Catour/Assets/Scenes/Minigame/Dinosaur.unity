@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 170841828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.4, y: -1.4, z: 0}
+  m_LocalPosition: {x: -3.11, y: -1.4, z: 0}
   m_LocalScale: {x: 0.47155058, y: 0.5873456, z: 1.1626}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -216,6 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484543477}
   - component: {fileID: 484543476}
+  - component: {fileID: 484543478}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -239,7 +240,10 @@ MonoBehaviour:
   - {fileID: 4782114695551514469, guid: 6f02cb4c0b2cfa44da76303d37d975b7, type: 3}
   - {fileID: 6991475737443213140, guid: e696aa52f30ced242afb72418af62152, type: 3}
   - {fileID: 3920300495303654313, guid: 4f3c736a0118cc7479dfdea1c7fd1bce, type: 3}
+  spawnMin: 0
   spawnMax: 5
+  Control: {fileID: 2087835352}
+  gameOver: {fileID: 484543478}
   gameOverText: {fileID: 1033052791}
 --- !u!4 &484543477
 Transform:
@@ -256,6 +260,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &484543478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484543475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9570d14ea06dd604481071709cc31ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &511096003
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +554,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ab7c871bd0e349d44802ee5cd47a778e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44c3fdf91678a22488df260ccec6b3b9, type: 2}
   m_sharedMaterial: {fileID: 21175996417216586, guid: ab7c871bd0e349d44802ee5cd47a778e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -602,7 +618,7 @@ MonoBehaviour:
   m_margin: {x: -0.440979, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1033052792
@@ -645,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  gameOver: {fileID: 484543478}
 --- !u!212 &1477765647
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -769,7 +786,7 @@ PrefabInstance:
     - target: {fileID: 1853580152530155741, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: ac1ce836a12ddac4fb820bbaba1f7e3a, type: 2}
+      objectReference: {fileID: 9100000, guid: 8123854a5f8822241afe26af56877aa3, type: 2}
     - target: {fileID: 6064395974836287043, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_Constraints
       value: 5
@@ -818,10 +835,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cat
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2087835351}
+    - target: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DinosaurRun, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4971775630009072612, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7573695425036984957, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2087835351}
   m_SourcePrefab: {fileID: 100100000, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
 --- !u!1 &1683434249
 GameObject:
@@ -1184,6 +1213,55 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &2087835343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7573695425036984957, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+  m_PrefabInstance: {fileID: 1535680302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2087835347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8337795059596430344, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+  m_PrefabInstance: {fileID: 1535680302}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087835343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8912c1a141278c941acd27cc919c381e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2087835348 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1853580152530155741, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+  m_PrefabInstance: {fileID: 1535680302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2087835351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087835343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdc627c2d7d51c469ffbacedcaf67a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control: {fileID: 2087835352}
+  spawn: {fileID: 484543476}
+  controller: {fileID: 2087835347}
+  animator: {fileID: 2087835348}
+  runSpeed: 10
+--- !u!114 &2087835352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6688134980025819742, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+  m_PrefabInstance: {fileID: 1535680302}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087835343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2ed293cc2112142aceedbb97aa3d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

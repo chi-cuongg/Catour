@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4971775630009072612}
   - component: {fileID: 6064395974836287043}
   - component: {fileID: 6297063131351320790}
+  - component: {fileID: 6688134980025819742}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -122,7 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8912c1a141278c941acd27cc919c381e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 200
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd000d518ab794419e25d4e108015eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Control: {fileID: 0}
   controller: {fileID: 8337795059596430344}
   animator: {fileID: 1853580152530155741}
   runSpeed: 0.5
@@ -231,3 +232,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &6688134980025819742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7573695425036984957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2ed293cc2112142aceedbb97aa3d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

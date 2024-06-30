@@ -6,17 +6,17 @@ public class Project : MonoBehaviour
 {
     public float speed;
     public float boundary;
-    private SpawnObstacles spawn;
+    private GameOver gameOver;
     // Start is called before the first frame update
     void Start()
     {
-        spawn = FindAnyObjectByType<SpawnObstacles>();
+        gameOver = FindAnyObjectByType<GameOver>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!spawn.isGameOver()){
+        if(!gameOver.isGameOver()){
             transform.Translate(Vector3.left * Time.deltaTime * speed);
             if(transform.position.x <= boundary){
                 Destroy(gameObject);
@@ -25,6 +25,6 @@ public class Project : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-            spawn.setGameOver();
+        gameOver.setGameOver();
     }
 }
