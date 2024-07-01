@@ -16,7 +16,7 @@ public class KeyItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(project){
+        if(project && !end.isGameOver()){
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
     }

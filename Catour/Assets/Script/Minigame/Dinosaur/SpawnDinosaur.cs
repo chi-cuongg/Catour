@@ -15,7 +15,9 @@ public class SpawnDinosaur : MonoBehaviour
     public GameOver gameOver;
     private bool spawn = true;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI congratulationText;
     public bool Loop = false;
+    public int targetScore;
     private int score = 0;
     // Start is called before the first frame update
     void Start()
@@ -30,13 +32,14 @@ public class SpawnDinosaur : MonoBehaviour
             Control.enableControl(false);
             spawn = false;
             if(gameOver.isGameOver()) gameOverText.gameObject.SetActive(true);
+            else if(gameOver.isEnd()) congratulationText.gameObject.SetActive(true);
         }
     }
 
     public void Score(){
         if(!Loop){
             score++;
-            if(score == 10){
+            if(score == targetScore){
                 gameOver.setVictory();
             }
         }
