@@ -147,7 +147,6 @@ MonoBehaviour:
   Cat: {fileID: 1076716414}
   spawnMin: 1
   spawnMax: 5
-  waitingTime: 0
   attention: {fileID: 1688820931}
 --- !u!1 &1302465138
 GameObject:

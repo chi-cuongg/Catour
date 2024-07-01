@@ -9,7 +9,8 @@ public class Fishing : MonoBehaviour
     public Animator Cat;
     public float spawnMin;
     public float spawnMax;
-    public float waitingTime;
+    private float spawnRate;
+    private float spawnWait;
     private bool fish = false;
     private bool fishing = false;
     public GameObject attention;
@@ -23,23 +24,35 @@ public class Fishing : MonoBehaviour
     void Update()
     {
         if(fishing){
-            Debug.Log(fish);
             attention.SetActive(fish);
         }else attention.SetActive(false);
 
         if(Input.GetKeyDown(KeyCode.Space)){
             fishing = !fishing;
             Cat.SetBool("Fishing", fishing);
-            if(fishing) StartCoroutine(Spawn());
+            
+            if(fishing) spawn();
+            else fish = false;
+        }
+
+        if(spawnRate > 0){
+            spawnRate -= Time.deltaTime;
+            
+        }else{
+            if(fishing){
+                fish = true;
+                if(spawnWait > 0){
+                    spawnWait -= Time.deltaTime;
+                }else{
+                    fish = false;
+                    spawn();
+                }
+            }
         }
     }
 
-    IEnumerator Spawn(){
-        float spawnRate = Random.Range(spawnMin, spawnMax);
-        Debug.Log(spawnRate);
-        yield return new WaitForSeconds(spawnRate);
-        fish = true;
-        yield return new WaitForSeconds(waitingTime);
-        fish = false;
+    private void spawn(){
+        spawnRate = Random.Range(spawnMin, spawnMax);
+        spawnWait = Random.Range(spawnMin, spawnMax);
     }
 }

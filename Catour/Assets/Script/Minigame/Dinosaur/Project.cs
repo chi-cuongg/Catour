@@ -6,10 +6,12 @@ public class Project : MonoBehaviour
 {
     public float speed;
     public float boundary;
+    private SpawnDinosaur spawn;
     private GameOver gameOver;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        spawn = FindAnyObjectByType<SpawnDinosaur>();
         gameOver = FindAnyObjectByType<GameOver>();
     }
 
@@ -20,6 +22,7 @@ public class Project : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * speed);
             if(transform.position.x <= boundary){
                 Destroy(gameObject);
+                spawn.Score();
             }
         }
     }

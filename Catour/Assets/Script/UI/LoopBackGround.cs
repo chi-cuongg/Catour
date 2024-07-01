@@ -19,7 +19,7 @@ public class LoopBackGround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!gameOver.isGameOver()){
+        if(!gameOver.isGameOver() && !gameOver.isEnd()){
             transform.Translate(Vector3.left * Time.deltaTime * speed);
 
             if(transform.position.x <= start.x - width){

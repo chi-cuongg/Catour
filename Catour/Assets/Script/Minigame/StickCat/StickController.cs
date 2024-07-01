@@ -13,7 +13,7 @@ public class StickController : MonoBehaviour
     private SpawnObject spawn;
     private GameObject cat;
 
-    void Start()
+    void Awake()
     {
         spawn = GameObject.Find("Spawn").GetComponent<SpawnObject>();
         cat = GameObject.Find("Cat");
@@ -22,33 +22,33 @@ public class StickController : MonoBehaviour
     void Update()
     {
         if(control){
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    isExtending = true;
-                    isRotating = false;
-                }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                isExtending = true;
+                isRotating = false;
+            }
 
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    isExtending = false;
-                    isRotating = true;
-                    control = false;
-                    float height = (gameObject.GetComponent<BoxCollider2D>().size.y * transform.localScale.y) / 2;
-                    axisPoint = transform.position - new Vector3(0, height, 0);
-                }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                isExtending = false;
+                isRotating = true;
+                control = false;
+                float height = (gameObject.GetComponent<BoxCollider2D>().size.y * transform.localScale.y) / 2;
+                axisPoint = transform.position - new Vector3(0, height, 0);
+            }
         }
 
-            if (isExtending)
-            {
-                float extendAmount = extendSpeed * Time.deltaTime;
-                transform.localScale += new Vector3(0, extendAmount, 0);
-                transform.position += new Vector3(0, extendAmount / 2, 0);
-            }
+        if (isExtending)
+        {
+            float extendAmount = extendSpeed * Time.deltaTime;
+            transform.localScale += new Vector3(0, extendAmount, 0);
+            transform.position += new Vector3(0, extendAmount / 2, 0);
+        }
 
-            if (isRotating)
-            {
-                transform.RotateAround(axisPoint, Vector3.back, rotateSpeed * Time.deltaTime);
-            }
+        if (isRotating)
+        {
+            transform.RotateAround(axisPoint, Vector3.back, rotateSpeed * Time.deltaTime);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
