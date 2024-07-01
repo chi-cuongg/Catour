@@ -39,7 +39,7 @@ public class SpawnDinosaur : MonoBehaviour
     public void Score(){
         if(!Loop){
             score++;
-            if(score == targetScore){
+            if(score == targetScore-1){
                 gameOver.setVictory();
             }
         }
