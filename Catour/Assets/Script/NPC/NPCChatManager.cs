@@ -1,23 +1,29 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class NPCChatManager : MonoBehaviour
 {
     public GameObject npcChatPanel;  // Panel chứa nội dung chat
-    public Text npcChatText;  // Đối tượng Text hiển thị nội dung chat
+    public GameObject[] chatTexts;  // Mảng chứa các Text component
 
-    private bool isChatVisible = false;
+    private int currentTextIndex = 0;
 
     void Start()
     {
-        if (npcChatPanel == null || npcChatText == null)
+        if (npcChatPanel == null)
         {
-            Debug.LogError("NPC Chat Panel or Text is not assigned in the inspector.");
+            Debug.LogError("NPC Chat Panel is not assigned in the inspector.");
             return;
         }
 
-        // Ẩn khung chat khi bắt đầu
+        if (chatTexts == null || chatTexts.Length == 0)
+        {
+            Debug.LogError("Chat Texts are not assigned in the inspector.");
+            return;
+        }
+
+        // Ẩn khung chat và tất cả các Text khi bắt đầu
         npcChatPanel.SetActive(false);
+        HideAllTexts();
     }
 
     void Update()
@@ -26,21 +32,41 @@ public class NPCChatManager : MonoBehaviour
         {
             ToggleChat();
         }
+
+        if (npcChatPanel.activeSelf && Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowNextText();
+        }
     }
 
     void ToggleChat()
     {
-        isChatVisible = !isChatVisible;
-        npcChatPanel.SetActive(isChatVisible);
+        npcChatPanel.SetActive(true);
+        ShowNextText();  // Hiển thị đoạn chat đầu tiên khi mở khung chat
+    }
 
-        if (isChatVisible)
+    void ShowNextText()
+    {
+        HideAllTexts();  // Ẩn tất cả các Text hiện tại
+
+        if (currentTextIndex < chatTexts.Length)
         {
-            UpdateChatText("Hello! How can I help you today?");
+            chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
+            currentTextIndex++;
+        }
+        else
+        {
+            // Nếu đã đến đoạn chat cuối cùng, có thể đóng khung chat hoặc lặp lại từ đầu
+            npcChatPanel.SetActive(false);
+            currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
         }
     }
 
-    void UpdateChatText(string message)
+    void HideAllTexts()
     {
-        npcChatText.text = message;
+        foreach (GameObject text in chatTexts)
+        {
+            text.SetActive(false);
+        }
     }
 }
