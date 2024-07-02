@@ -22,7 +22,9 @@ public class KeyItem : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        end.setEnd();
-        project = false;
+        if(other.tag == "Player"){
+            end.setEnd();
+            project = false;           
+        }
     }
 }
