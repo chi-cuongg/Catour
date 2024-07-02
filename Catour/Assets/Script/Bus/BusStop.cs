@@ -7,8 +7,8 @@ using UnityEngine;
 public class BusStop : MonoBehaviour
 {
     public GameObject bus;
-    public bool triggered = false;
-    public GameObject cat;
+    private bool triggered = false;
+    private GameObject cat;
     // Start is called before the first frame update
     void Start()
     {

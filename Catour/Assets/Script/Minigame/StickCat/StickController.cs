@@ -25,16 +25,16 @@ public class StickController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isExtending = true;
-                isRotating = false;
             }
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                float height = (gameObject.GetComponent<BoxCollider2D>().size.y * transform.localScale.y) / 2;
+                axisPoint = transform.position - new Vector3(0, height, 0);
+
                 isExtending = false;
                 isRotating = true;
                 control = false;
-                float height = (gameObject.GetComponent<BoxCollider2D>().size.y * transform.localScale.y) / 2;
-                axisPoint = transform.position - new Vector3(0, height, 0);
             }
         }
 

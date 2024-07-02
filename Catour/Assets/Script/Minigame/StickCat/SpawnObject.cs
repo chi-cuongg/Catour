@@ -1,33 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SpawnObject : MonoBehaviour
 {
     public GameObject Object;
+    public GameObject key;
+    private GameObject Object0;
     private GameObject Object1;
     private GameObject Object2;
     private bool nextObject = true;
     private float position = 0;
-    private bool gameOver = false;
-
+    public float minRange;
+    public float maxRange;
+    private int point = -1;
+    public int targetPoint;
+    public bool Loop = false;
+    public GameOver gameOver;
+    public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI victoryText;
     // Start is called before the first frame update
     void Start()
     {
         Spawn();
-        Object2.transform.GetChild(1).gameObject.SetActive(true);
+        Object1 = Object2;
+        setStick();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(nextObject){
+            Object0 = Object1;
             Object1 = Object2;
-            position += Random.Range(4, 6);
+
+            position += Random.Range(minRange, maxRange);
             Spawn();
+            if(!Loop){
+                if(point == targetPoint-1) Key();
+            }
+            
             nextObject = false;
+        }
+
+        if(gameOver.isGameOver()){
+            gameOverText.gameObject.SetActive(true);
+        }
+
+        if(gameOver.isEnd()){
+            victoryText.gameObject.SetActive(true);
         }
     }
 
@@ -36,18 +63,25 @@ public class SpawnObject : MonoBehaviour
     }
 
     public void Next(){
-        nextObject = true;
-    }
-
-    public void setGameOver(){
-        gameOver = true;
-    }
-
-    public bool isGameOver(){
-        return gameOver;
+        if(!Loop){
+            if(point < targetPoint){
+                nextObject = true;
+            }
+        }else nextObject = true;
     }
 
     public void setStick(){
+        Destroy(Object0);
+        point++;
         Object1.transform.GetChild(1).gameObject.SetActive(true);
+    }
+
+    public void Key(){
+        Vector3 dest = new Vector3(Object2.transform.position.x, Object2.transform.position.y + (Object2.GetComponentInChildren<BoxCollider2D>().size.y) / 2 + 0.5f, Object2.transform.position.z);
+        Instantiate(key, dest, key.transform.rotation);
+    }
+
+    public void Restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
