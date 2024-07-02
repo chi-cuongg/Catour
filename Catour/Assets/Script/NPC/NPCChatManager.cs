@@ -6,6 +6,8 @@ public class NPCChatManager : MonoBehaviour
     public GameObject[] chatTexts;  // Mảng chứa các Text component
 
     private int currentTextIndex = 0;
+    public bool triggered = false;
+    public GameObject cat;
 
     void Start()
     {
@@ -28,10 +30,22 @@ public class NPCChatManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (triggered)
         {
-            ToggleChat();
+            if (cat.GetComponent<Controller>().isControl())
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    ToggleChat();
+                    cat.GetComponent<Controller>().enableControl(false);
+                }
+            }
         }
+
+        // if (Input.GetKeyDown(KeyCode.F))
+        // {
+        //     ToggleChat();
+        // }
 
         if (npcChatPanel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
@@ -59,6 +73,7 @@ public class NPCChatManager : MonoBehaviour
             // Nếu đã đến đoạn chat cuối cùng, có thể đóng khung chat hoặc lặp lại từ đầu
             npcChatPanel.SetActive(false);
             currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
+            cat.GetComponent<Controller>().enableControl(true);
         }
     }
 
@@ -68,5 +83,15 @@ public class NPCChatManager : MonoBehaviour
         {
             text.SetActive(false);
         }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        triggered = true;
+        cat = other.gameObject;
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        triggered = false;
+        cat = null;
     }
 }
