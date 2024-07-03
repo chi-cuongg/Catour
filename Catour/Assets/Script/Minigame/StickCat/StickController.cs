@@ -15,7 +15,7 @@ public class StickController : MonoBehaviour
 
     void Awake()
     {
-        spawn = GameObject.Find("Spawn").GetComponent<SpawnObject>();
+        spawn = GameObject.Find("GameManager").GetComponent<SpawnObject>();
         cat = GameObject.Find("Cat");
     }
 

@@ -1302,7 +1302,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Control: {fileID: 2087835352}
-  spawn: {fileID: 484543476}
   controller: {fileID: 2087835347}
   animator: {fileID: 2087835348}
   runSpeed: 10

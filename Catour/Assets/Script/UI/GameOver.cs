@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameOver : MonoBehaviour
 {
     private bool gameOver = false;
-    private bool victory = false;
     private bool end = false;
     // Start is called before the first frame update
     void Start()
@@ -25,14 +24,6 @@ public class GameOver : MonoBehaviour
 
     public bool isGameOver(){
         return gameOver;
-    }
-
-    public void setVictory(){
-        victory = true;
-    }
-
-    public bool isVictory(){
-        return victory;
     }
 
     public void setEnd(){

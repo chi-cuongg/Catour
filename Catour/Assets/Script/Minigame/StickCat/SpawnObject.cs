@@ -17,10 +17,10 @@ public class SpawnObject : MonoBehaviour
     private GameObject Object2;
     private bool nextObject = true;
     private float position = 0;
-    public float minRange;
-    public float maxRange;
-    private int point = -1;
-    public int targetPoint;
+    public float spawnMin;
+    public float spawnMax;
+    private int score = -1;
+    public int targetScore;
     public bool Loop = false;
     public GameOver gameOver;
     public TextMeshProUGUI gameOverText;
@@ -40,10 +40,11 @@ public class SpawnObject : MonoBehaviour
             Object0 = Object1;
             Object1 = Object2;
 
-            position += Random.Range(minRange, maxRange);
+            position += Random.Range(spawnMin, spawnMax);
             Spawn();
             if(!Loop){
-                if(point == targetPoint-1) Key();
+                score++;
+                if(score == targetScore-1) Key();
             }
             
             nextObject = false;
@@ -64,7 +65,7 @@ public class SpawnObject : MonoBehaviour
 
     public void Next(){
         if(!Loop){
-            if(point < targetPoint){
+            if(score < targetScore-1){
                 nextObject = true;
             }
         }else nextObject = true;
@@ -72,7 +73,7 @@ public class SpawnObject : MonoBehaviour
 
     public void setStick(){
         Destroy(Object0);
-        point++;
+        
         Object1.transform.GetChild(1).gameObject.SetActive(true);
     }
 

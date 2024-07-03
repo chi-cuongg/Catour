@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Project : MonoBehaviour
+public class Move : MonoBehaviour
 {
     public float speed;
     public float boundary;
-    private SpawnDinosaur spawn;
+    private SpawnFlappy spawn;
     private GameOver gameOver;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        spawn = FindAnyObjectByType<SpawnDinosaur>();
+        spawn = FindAnyObjectByType<SpawnFlappy>();
         gameOver = FindAnyObjectByType<GameOver>();
     }
 
@@ -20,14 +21,16 @@ public class Project : MonoBehaviour
     {
         if(!gameOver.isGameOver() && !gameOver.isEnd()){
             transform.Translate(Vector3.left * Time.deltaTime * speed);
-            
+
             if(transform.position.x <= boundary){
-                Destroy(gameObject);
+                Destroy(gameObject.transform.parent.gameObject);
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        gameOver.setGameOver();
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Player"){
+            gameOver.setGameOver();
+        }
     }
 }

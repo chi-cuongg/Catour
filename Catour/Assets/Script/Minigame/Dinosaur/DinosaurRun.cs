@@ -5,13 +5,10 @@ using UnityEngine;
 public class DinosaurRun : MonoBehaviour
 {
     public Controller Control;
-    public SpawnDinosaur spawn;
     public CharacterController2D controller;
     public Animator animator;
     public float runSpeed = 2f;
     bool jump = false;
-    private const float idleThreshold = 5f;
-
     // Start is called before the first frame update
     void Start()
     {

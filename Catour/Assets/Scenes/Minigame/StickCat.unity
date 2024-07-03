@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 1625441321}
   - component: {fileID: 1625441323}
   m_Layer: 0
-  m_Name: Spawn
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,9 +889,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Object: {fileID: 7332647179630560324, guid: b5369d5367e25904393c630cdf3ad42c, type: 3}
   key: {fileID: 6834071980385485049, guid: a11e510525abb9d469932f74d33db1e5, type: 3}
-  minRange: 3
-  maxRange: 5.5
-  targetPoint: 2
+  spawnMin: 3
+  spawnMax: 5.5
+  targetScore: 10
   Loop: 0
   gameOver: {fileID: 1625441323}
   gameOverText: {fileID: 201819954}

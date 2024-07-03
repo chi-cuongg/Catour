@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class SpawnDinosaur : MonoBehaviour
+
+public class SpawnFlappy : MonoBehaviour
 {
-    public List<GameObject> Obstacles;
+    public GameObject Obstacles;
     public GameObject key;
     public float spawnMin;
     public float spawnMax;
+    public float offset;
     public Controller Control;
     public GameOver gameOver;
     private bool spawn = true;
@@ -29,10 +30,13 @@ public class SpawnDinosaur : MonoBehaviour
     void Update()
     {
         if(gameOver.isGameOver() || gameOver.isEnd()){
-            Control.enableControl(false);
+            if(Control != null) Control.enableControl(false);
             spawn = false;
+
             if(gameOver.isGameOver()) gameOverText.gameObject.SetActive(true);
             else if(gameOver.isEnd()) congratulationText.gameObject.SetActive(true);
+
+            this.enabled = false;
         }
     }
 
@@ -40,14 +44,13 @@ public class SpawnDinosaur : MonoBehaviour
         while(spawn){
             float spawnRate = Random.Range(spawnMin, spawnMax);
             yield return new WaitForSeconds(spawnRate);
-            int index = Random.Range(0, Obstacles.Count);
-            Instantiate(Obstacles[index], new Vector3(transform.position.x, transform.position.y + (Obstacles[index].GetComponent<BoxCollider2D>().size.y)/2, transform.position.z), Obstacles[index].transform.rotation);
+            float off = Random.Range(-offset, offset);
+            Instantiate(Obstacles, new Vector3(transform.position.x, transform.position.y + off, transform.position.z), Obstacles.transform.rotation);
             
             if(!Loop){
                 score++;
-                if(score == targetScore){
-                    yield return new WaitForSeconds(spawnMax);
-                    Instantiate(key, new Vector3(transform.position.x, transform.position.y + (key.GetComponent<BoxCollider2D>().size.y)/2, transform.position.z), key.transform.rotation);
+                if(score == targetScore){ 
+                    Instantiate(key, new Vector3(transform.position.x, transform.position.y + off, transform.position.z), Obstacles.transform.rotation);
                     StopAllCoroutines();
                 }
             }

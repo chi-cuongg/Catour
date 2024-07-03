@@ -18,6 +18,7 @@ public class Fishing : MonoBehaviour
     private bool fish = false;
     private bool fishing = false;
     private bool Continue = true;
+    private bool gacha = false;
     public GameObject attention;
     public FishSprite fishSprite;
     public TextMeshProUGUI text;
@@ -68,17 +69,20 @@ public class Fishing : MonoBehaviour
 
         if(spawnRate > 0){
             spawnRate -= Time.deltaTime;
+            if(spawnRate <= 0) gacha = true;
         }else{
             if(fishing){
-                fish = true;
-                gacha();
-                fishobj = fishObject[index];
+                if(gacha){
+                    fish = true;
+                    Gacha();
+                    fishobj = fishObject[index];
+                    gacha = false;
+                }
 
                 if(spawnWait > 0){
                     spawnWait -= Time.deltaTime;
                 }else{
                     fish = false;
-
                     spawn();
                 }
             }
@@ -90,7 +94,7 @@ public class Fishing : MonoBehaviour
         spawnWait = Random.Range(spawnMin, spawnMax);
     }
 
-    private void gacha(){
+    private void Gacha(){
         int choose = Random.Range(0, 100);
         
         if(choose >= 0 && choose < 50 - rate){
