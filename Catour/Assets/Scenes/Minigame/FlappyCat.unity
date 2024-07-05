@@ -907,15 +907,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7275232403282659864, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1081686044}
   congratulationText: {fileID: 1353162387}
   Loop: 0
-  targetScore: 1
+  targetScore: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

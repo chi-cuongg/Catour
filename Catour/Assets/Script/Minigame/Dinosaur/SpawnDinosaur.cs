@@ -41,13 +41,13 @@ public class SpawnDinosaur : MonoBehaviour
             float spawnRate = Random.Range(spawnMin, spawnMax);
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, Obstacles.Count);
-            Instantiate(Obstacles[index], new Vector3(transform.position.x, transform.position.y + (Obstacles[index].GetComponent<BoxCollider2D>().size.y)/2, transform.position.z), Obstacles[index].transform.rotation);
+            Instantiate(Obstacles[index], new Vector3(transform.position.x, transform.position.y + (Obstacles[index].GetComponent<BoxCollider2D>().size.y * Obstacles[index].transform.localScale.y )/2, transform.position.z), Obstacles[index].transform.rotation);
             
             if(!Loop){
                 score++;
                 if(score == targetScore){
                     yield return new WaitForSeconds(spawnMax);
-                    Instantiate(key, new Vector3(transform.position.x, transform.position.y + (key.GetComponent<BoxCollider2D>().size.y)/2, transform.position.z), key.transform.rotation);
+                    Instantiate(key, new Vector3(transform.position.x, transform.position.y + (key.GetComponent<BoxCollider2D>().size.y) * key.transform.localScale.y /2, transform.position.z), key.transform.rotation);
                     StopAllCoroutines();
                 }
             }

@@ -22,13 +22,11 @@ public class Fishing : MonoBehaviour
     public GameObject attention;
     public FishSprite fishSprite;
     public TextMeshProUGUI text;
+    public SceneChange scene;
     // Start is called before the first frame update
     void Start()
     {
-        fishing = !fishing;
-        Cat.SetBool("Fishing", fishing);
-
-        spawn();
+        scene = FindAnyObjectByType<SceneChange>();
     }
 
     // Update is called once per frame
@@ -39,30 +37,31 @@ public class Fishing : MonoBehaviour
         }else attention.SetActive(false);
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            if(Continue){
-                fishing = !fishing;
-                Cat.SetBool("Fishing", fishing);
-                
-                if(fishing){ 
+            Cat.enabled = true;
+            fishing = !fishing;
+            Cat.SetBool("Fishing", fishing);
+            
+            if(fishing){ 
+                if(Continue){
                     fishSprite.gameObject.SetActive(false);
                     text.text = "";
 
                     spawn();
-                }else{ 
-                    if(fish){
-                        fishSprite.Fish(fishobj);
-                        Debug.Log(index);
-                        if(index == 3){
-                            text.text = "Congratulation!!!";
-                            text.color = new Color(255, 255, 0, 255);
-                            Continue = false;
-                        }else text.text = "Better luck next time!";
+                }else scene.Return();
+            }else{ 
+                if(fish){
+                    fishSprite.Fish(fishobj);
+                    Debug.Log(index);
+                    if(index == 3){
+                        text.text = "Congratulation!!!";
+                        text.color = new Color(255, 255, 0, 255);
+                        Continue = false;
+                    }else text.text = "Better luck next time!";
 
-                        rate += rateUp;
-                        fish = false;
-                    }else{
-                        text.text = "Oops...";
-                    }
+                    rate += rateUp;
+                    fish = false;
+                }else{
+                    text.text = "Oops...";
                 }
             }
         }

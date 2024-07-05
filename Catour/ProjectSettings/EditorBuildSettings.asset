@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/UI/UI.unity
     guid: 38a28e8b70d403746a4afb98f87c9f99
   - enabled: 1
-    path: Assets/Scenes/Main/Cutscene.unity
+    path: Assets/Scenes/UI/Cutscene.unity
     guid: b6f2b63d00e1b9b47b8fb4722ab16494
   - enabled: 1
-    path: Assets/Scenes/Main/HoaLac_cuong.unity
-    guid: 87742584139cb634282953334011f683
+    path: Assets/Scenes/Main/HoaLac.unity
+    guid: cc561aed4d51de149b48888c5b13cefc
   - enabled: 1
     path: Assets/Scenes/Main/Hanoi.unity
     guid: 4443c4ecd31586f448a58709c19527d1
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main/Hanoi3.unity
     guid: 9c9633e39ea05a54892b960009419c45
+  - enabled: 1
+    path: Assets/Scenes/Minigame/Fishing.unity
+    guid: a831a01a722b5f04c8d315366813968e
   m_configObjects: {}

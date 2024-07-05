@@ -146,7 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   boundary: -10
-  spawn: {fileID: 0}
 --- !u!61 &2494616102930511205
 BoxCollider2D:
   m_ObjectHideFlags: 0

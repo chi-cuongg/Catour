@@ -8,6 +8,7 @@ TagManager:
   - Bus Stop
   - Square
   - Node
+  - Scene
   layers:
   - Default
   - TransparentFX

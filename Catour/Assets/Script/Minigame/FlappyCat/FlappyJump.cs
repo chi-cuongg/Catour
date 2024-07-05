@@ -36,6 +36,7 @@ public class FlappyJump : MonoBehaviour
     }
 
     private void OnDestroy() {
-        gameOver.setGameOver();
+        if(gameOver != null)
+            gameOver.setGameOver();
     }
 }

@@ -40,9 +40,11 @@ public class StickController : MonoBehaviour
 
         if (isExtending)
         {
-            float extendAmount = extendSpeed * Time.deltaTime;
-            transform.localScale += new Vector3(0, extendAmount, 0);
-            transform.position += new Vector3(0, extendAmount / 2, 0);
+            if(transform.localScale.y < 4){
+                float extendAmount = extendSpeed * Time.deltaTime;
+                transform.localScale += new Vector3(0, extendAmount, 0);
+                transform.position += new Vector3(0, extendAmount / 2, 0);
+            }else isExtending = false;
         }
 
         if (isRotating)

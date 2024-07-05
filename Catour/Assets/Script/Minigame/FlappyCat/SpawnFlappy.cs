@@ -30,8 +30,10 @@ public class SpawnFlappy : MonoBehaviour
     void Update()
     {
         if(gameOver.isGameOver() || gameOver.isEnd()){
-            if(Control != null) Control.enableControl(false);
-            spawn = false;
+            if(Control != null){ 
+                Control.enableControl(false);
+                Control.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+            }spawn = false;
 
             if(gameOver.isGameOver()) gameOverText.gameObject.SetActive(true);
             else if(gameOver.isEnd()) congratulationText.gameObject.SetActive(true);

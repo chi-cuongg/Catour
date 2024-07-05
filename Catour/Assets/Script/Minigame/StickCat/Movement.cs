@@ -41,6 +41,7 @@ public class Movement : MonoBehaviour
     }
 
     private void OnDestroy() {
-        gameOver.setGameOver();
+        if(gameOver != null)
+            gameOver.setGameOver();
     }
 }
