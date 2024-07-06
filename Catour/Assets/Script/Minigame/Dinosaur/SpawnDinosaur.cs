@@ -19,9 +19,12 @@ public class SpawnDinosaur : MonoBehaviour
     public bool Loop = false;
     private int score = 0;
     public int targetScore;
+    private SceneChange scene;
     // Start is called before the first frame update
     void Start()
     {
+        scene = FindAnyObjectByType<SceneChange>();
+
         StartCoroutine(Spawn());
     }
 
@@ -33,6 +36,13 @@ public class SpawnDinosaur : MonoBehaviour
             spawn = false;
             if(gameOver.isGameOver()) gameOverText.gameObject.SetActive(true);
             else if(gameOver.isEnd()) congratulationText.gameObject.SetActive(true);
+        }
+
+        if(!spawn){
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(scene != null) scene.Return();
+                else Restart();
+            }
         }
     }
 
@@ -55,6 +65,6 @@ public class SpawnDinosaur : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 }

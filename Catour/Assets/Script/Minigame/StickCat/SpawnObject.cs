@@ -22,12 +22,16 @@ public class SpawnObject : MonoBehaviour
     private int score = -1;
     public int targetScore;
     public bool Loop = false;
+    private bool Return = false;
     public GameOver gameOver;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI victoryText;
+    private SceneChange scene;
     // Start is called before the first frame update
     void Start()
     {
+        scene = FindAnyObjectByType<SceneChange>();
+
         Spawn();
         Object1 = Object2;
         setStick();
@@ -52,10 +56,19 @@ public class SpawnObject : MonoBehaviour
 
         if(gameOver.isGameOver()){
             gameOverText.gameObject.SetActive(true);
+            Return = true;
         }
 
         if(gameOver.isEnd()){
             victoryText.gameObject.SetActive(true);
+            Return = true;
+        }
+
+        if(Return){
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(scene != null) scene.Return();
+                else Restart();
+            }
         }
     }
 
@@ -83,6 +96,6 @@ public class SpawnObject : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 }
