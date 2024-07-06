@@ -37,34 +37,32 @@ public class Fishing : MonoBehaviour
         }else attention.SetActive(false);
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            if(Continue){
-                Cat.enabled = true;
-                fishing = !fishing;
-                Cat.SetBool("Fishing", fishing);
+            Cat.enabled = true;
+            fishing = !fishing;
+            Cat.SetBool("Fishing", fishing);
             
-                if(fishing){ 
-                        fishSprite.gameObject.SetActive(false);
-                        text.text = "";
-                        spawn();
-                }else{ 
-                    if(fish){
-                        fishSprite.Fish(fishobj);
-                        Debug.Log(index);
-                        if(index == 3){
-                            text.text = "Congratulation!!!";
-                            text.color = new Color(255, 255, 0, 255);
-                            Continue = false;
-                        }else text.text = "Better luck next time!";
+            if(fishing){ 
+                if(Continue){
+                    fishSprite.gameObject.SetActive(false);
+                    text.text = "";
 
-                        rate += rateUp;
-                        fish = false;
-                    }else{
-                        text.text = "Oops...";
-                    }
-                }
+                    spawn();
+                }else scene.Return();
             }else{ 
-                if(scene != null) scene.Return();
-                else Restart();
+                if(fish){
+                    fishSprite.Fish(fishobj);
+                    Debug.Log(index);
+                    if(index == 3){
+                        text.text = "Congratulation!!!";
+                        text.color = new Color(255, 255, 0, 255);
+                        Continue = false;
+                    }else text.text = "Better luck next time!";
+
+                    rate += rateUp;
+                    fish = false;
+                }else{
+                    text.text = "Oops...";
+                }
             }
         }
 
@@ -107,9 +105,5 @@ public class Fishing : MonoBehaviour
         }else if(choose >= 95 - rate && choose < 100){
             index = 3;
         }
-    }
-
-    private void Restart(){
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 }
