@@ -8,8 +8,9 @@ public class SceneChange : MonoBehaviour
 {
     public static GameObject scene;
     private int current;
-    public int minigame;
+    private int minigame;
     private List<GameObject> data = new List<GameObject>();
+    public int key = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,6 @@ public class SceneChange : MonoBehaviour
             scene = this.gameObject;
             DontDestroyOnLoad(scene);
         }else Destroy(this.gameObject);
-        
         
         current = SceneManager.GetActiveScene().buildIndex;
     }
@@ -32,15 +32,26 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadSceneAsync(current + 1);
     }
 
-    public void MiniGame(){
-        SceneManager.LoadSceneAsync(minigame, LoadSceneMode.Additive);
+    public void MiniGame(int minigame){
+        if(minigame >= 0){
+            this.minigame = minigame;
+            SceneManager.LoadSceneAsync(minigame, LoadSceneMode.Additive);
 
-        foreach(GameObject g in GameObject.FindObjectsOfType<GameObject>()){
-            if(g.tag != "Scene"){
-                g.SetActive(false);
-                data.Add(g);
+            foreach(GameObject g in GameObject.FindObjectsOfType<GameObject>()){
+                if(g.tag != "Scene"){
+                    g.SetActive(false);
+                    data.Add(g);
+                }
             }
         }
+    }
+
+    public void setKey(){
+        key++;
+    }
+
+    public int getKey(){
+        return key;
     }
 
     public void Return(){

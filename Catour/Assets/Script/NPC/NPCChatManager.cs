@@ -8,9 +8,12 @@ public class NPCChatManager : MonoBehaviour
     private int currentTextIndex = 0;
     private bool triggered = false;
     private GameObject cat;
-    public SceneChange scene;
+    private SceneChange scene;
+    public int minigame;
     void Start()
     {
+        scene = FindAnyObjectByType<SceneChange>();
+
         if (npcChatPanel == null)
         {
             Debug.LogError("NPC Chat Panel is not assigned in the inspector.");
@@ -77,7 +80,7 @@ public class NPCChatManager : MonoBehaviour
             npcChatPanel.SetActive(false);
             currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
             cat.GetComponent<Controller>().enableControl(true);
-            scene.MiniGame();
+            if(scene != null) scene.MiniGame(minigame);
         }
     }
 

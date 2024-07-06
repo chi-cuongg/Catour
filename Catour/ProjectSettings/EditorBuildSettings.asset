@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigame/Fishing.unity
     guid: a831a01a722b5f04c8d315366813968e
+  - enabled: 1
+    path: Assets/Scenes/Minigame/Dinosaur.unity
+    guid: ffb684605c002c8478395b3f506f2594
+  - enabled: 1
+    path: Assets/Scenes/Minigame/StickCat.unity
+    guid: 87ac03c9194744745b6cbd7687696bfe
   m_configObjects: {}

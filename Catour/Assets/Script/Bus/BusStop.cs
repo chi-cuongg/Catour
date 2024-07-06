@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class BusStop : MonoBehaviour
@@ -9,10 +10,11 @@ public class BusStop : MonoBehaviour
     public GameObject bus;
     private bool triggered = false;
     private GameObject cat;
+    private SceneChange scene;
     // Start is called before the first frame update
     void Start()
     {
-        
+        scene = FindAnyObjectByType<SceneChange>();
     }
 
     // Update is called once per frame
@@ -21,9 +23,11 @@ public class BusStop : MonoBehaviour
         if(triggered){
             if(cat.GetComponent<Controller>().isControl()){
                 if(Input.GetKeyDown(KeyCode.F)){
-                    transform.GetChild(0).gameObject.SetActive(false);
-                    Instantiate(bus, new Vector3(transform.position.x + 10, transform.position.y - 1, transform.position.z), transform.rotation, gameObject.transform);
-                    cat.GetComponent<Controller>().enableControl(false);
+                    if(scene.getKey() >= 1){
+                        transform.GetChild(0).gameObject.SetActive(false);
+                        Instantiate(bus, new Vector3(transform.position.x + 10, transform.position.y - 1, transform.position.z), transform.rotation, gameObject.transform);
+                        cat.GetComponent<Controller>().enableControl(false);
+                    }
                 }
             }
         }

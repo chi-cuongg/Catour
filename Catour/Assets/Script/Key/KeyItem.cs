@@ -7,9 +7,11 @@ public class KeyItem : MonoBehaviour
     private bool project = true;
     public float speed;
     private GameOver end;
+    private SceneChange scene;
     // Start is called before the first frame update
     void Awake()
     {
+        scene = FindAnyObjectByType<SceneChange>();
         end = FindAnyObjectByType<GameOver>();
     }
 
@@ -25,7 +27,8 @@ public class KeyItem : MonoBehaviour
         if(other.tag == "Player"){
             other.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             end.setEnd();
-            project = false;           
+            project = false;    
+            if(scene != null) scene.setKey();       
         }
     }
 }
