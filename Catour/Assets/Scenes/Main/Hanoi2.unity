@@ -292,8 +292,7 @@ MonoBehaviour:
   chatTexts:
   - {fileID: 1505957993}
   - {fileID: 1391381289}
-  triggered: 0
-  cat: {fileID: 0}
+  scene: {fileID: 0}
 --- !u!212 &377357727
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -357,6 +356,7 @@ GameObject:
   - component: {fileID: 378378943}
   - component: {fileID: 378378942}
   - component: {fileID: 378378941}
+  - component: {fileID: 378378944}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -438,6 +438,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &378378944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378378940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5130b9bdc8f8ea4fa71b2188b30984f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0
 --- !u!1 &586117504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,8 +1880,7 @@ MonoBehaviour:
   chatTexts:
   - {fileID: 917418384}
   - {fileID: 708801529}
-  triggered: 0
-  cat: {fileID: 0}
+  scene: {fileID: 0}
 --- !u!212 &1635406581
 SpriteRenderer:
   m_ObjectHideFlags: 0
