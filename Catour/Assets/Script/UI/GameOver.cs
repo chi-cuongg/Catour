@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
+    private bool start = true;
     private bool gameOver = false;
     private bool end = false;
     // Start is called before the first frame update
@@ -16,6 +17,14 @@ public class GameOver : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void setStart(){
+        start = false;
+    }
+
+    public bool isStart(){
+        return start;
     }
 
     public void setGameOver(){

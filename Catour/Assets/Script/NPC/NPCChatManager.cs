@@ -38,6 +38,7 @@ public class NPCChatManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
+                    transform.GetChild(0).gameObject.SetActive(false);
                     ToggleChat();
                     cat.GetComponent<Controller>().enableControl(false);
                 }
@@ -91,10 +92,12 @@ public class NPCChatManager : MonoBehaviour
     {
         triggered = true;
         cat = other.gameObject;
+        transform.GetChild(0).gameObject.SetActive(true);
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         triggered = false;
         cat = null;
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }

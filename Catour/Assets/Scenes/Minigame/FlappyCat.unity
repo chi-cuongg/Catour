@@ -861,6 +861,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1853580152530155741, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8390681696c21d74c9df63c84055bd1c, type: 2}
     - target: {fileID: 4320695539824354801, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -871,7 +875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6064395974836287043, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_Constraints
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6064395974836287043, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       propertyPath: m_GravityScale

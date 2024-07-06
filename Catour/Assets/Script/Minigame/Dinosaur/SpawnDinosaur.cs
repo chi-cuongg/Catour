@@ -19,20 +19,37 @@ public class SpawnDinosaur : MonoBehaviour
     public bool Loop = false;
     private int score = 0;
     public int targetScore;
+    private SceneChange scene;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Spawn());
+        scene = FindAnyObjectByType<SceneChange>();
+        Control.enableControl(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(gameOver.isStart()){
+            if(Input.GetKeyUp(KeyCode.Space)){
+                StartCoroutine(Spawn());
+                Control.enableControl(true);
+                gameOver.setStart();
+            }
+        }
+
         if(gameOver.isGameOver() || gameOver.isEnd()){
             Control.enableControl(false);
             spawn = false;
             if(gameOver.isGameOver()) gameOverText.gameObject.SetActive(true);
             else if(gameOver.isEnd()) congratulationText.gameObject.SetActive(true);
+        }
+
+        if(!spawn){
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(scene != null) scene.Return();
+                else Restart();
+            }
         }
     }
 

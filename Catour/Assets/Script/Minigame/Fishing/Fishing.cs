@@ -22,7 +22,7 @@ public class Fishing : MonoBehaviour
     public GameObject attention;
     public FishSprite fishSprite;
     public TextMeshProUGUI text;
-    public SceneChange scene;
+    private SceneChange scene;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,32 +37,35 @@ public class Fishing : MonoBehaviour
         }else attention.SetActive(false);
 
         if(Input.GetKeyDown(KeyCode.Space)){
-            Cat.enabled = true;
-            fishing = !fishing;
-            Cat.SetBool("Fishing", fishing);
+            if(Continue){
+                Cat.enabled = true;
+                fishing = !fishing;
+                Cat.SetBool("Fishing", fishing);
             
-            if(fishing){ 
-                if(Continue){
+                if(fishing){ 
                     fishSprite.gameObject.SetActive(false);
                     text.text = "";
 
                     spawn();
-                }else scene.Return();
-            }else{ 
-                if(fish){
-                    fishSprite.Fish(fishobj);
-                    Debug.Log(index);
-                    if(index == 3){
-                        text.text = "Congratulation!!!";
-                        text.color = new Color(255, 255, 0, 255);
-                        Continue = false;
-                    }else text.text = "Better luck next time!";
+                }else{ 
+                    if(fish){
+                        fishSprite.Fish(fishobj);
+                        Debug.Log(index);
+                        if(index == 3){
+                            text.text = "Congratulation!!!";
+                            text.color = new Color(255, 255, 0, 255);
+                            Continue = false;
+                        }else text.text = "Better luck next time!";
 
-                    rate += rateUp;
-                    fish = false;
-                }else{
-                    text.text = "Oops...";
+                        rate += rateUp;
+                        fish = false;
+                    }else{
+                        text.text = "Oops...";
+                    }
                 }
+            }else{ 
+                if(scene != null) scene.Return();
+                else Restart();
             }
         }
 
@@ -86,6 +89,7 @@ public class Fishing : MonoBehaviour
                 }
             }
         }
+        
     }
 
     private void spawn(){
@@ -105,5 +109,9 @@ public class Fishing : MonoBehaviour
         }else if(choose >= 95 - rate && choose < 100){
             index = 3;
         }
+    }
+
+    private void Restart(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

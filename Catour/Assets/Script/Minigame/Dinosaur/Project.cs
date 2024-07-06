@@ -28,6 +28,7 @@ public class Project : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        other.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         gameOver.setGameOver();
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 public class VideoEndSceneChanger : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
-    public string nextSceneName;
-
     void Start()
     {
         if (videoPlayer == null)
@@ -26,6 +24,6 @@ public class VideoEndSceneChanger : MonoBehaviour
 
     void OnVideoEnd(VideoPlayer vp)
     {
-        SceneManager.LoadScene(nextSceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
