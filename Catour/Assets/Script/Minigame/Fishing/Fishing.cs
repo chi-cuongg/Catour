@@ -51,7 +51,7 @@ public class Fishing : MonoBehaviour
                 }else{ 
                     if(fish){
                         fishSprite.Fish(fishobj);
-                        Debug.Log(index);
+                        
                         if(index == 3){
                             text.text = "Congratulation!!!";
                             text.color = new Color(255, 255, 0, 255);
