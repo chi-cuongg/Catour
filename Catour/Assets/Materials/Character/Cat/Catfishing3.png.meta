@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Catour/Assets/Materials/LevelPack/Background/Background/fishingback.png.meta
-guid: 60e812872e8743e43a32cef00f8e2c68
-=======
-guid: 80f8065a78f83f64a8ca6847b53f313d
->>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/fishingback.png.meta
+guid: 617cffdef5878db46a9cf5eadb92de71
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<<< Updated upstream:Catour/Assets/Materials/UI/chat2.png.meta
 guid: 604a1ff35e4caa147acbb483e67402d4
+========
+guid: 21e493bdbaf378b40a9a72475077eb4a
+>>>>>>>> Stashed changes:Catour/Assets/Materials/Character/Cat/Catfishing2.png.meta
+=======
+guid: d0727b88f70ba89439721daead97ddd1
+>>>>>>> Stashed changes
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

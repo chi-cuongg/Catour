@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream:Catour/Assets/Materials/LevelPack/Background/Background/fishingback.png.meta
-guid: 60e812872e8743e43a32cef00f8e2c68
-=======
-guid: 80f8065a78f83f64a8ca6847b53f313d
->>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/fishingback.png.meta
+<<<<<<<< Updated upstream:Catour/Assets/Materials/UI/chat2.png.meta
+guid: 604a1ff35e4caa147acbb483e67402d4
+========
+guid: 21e493bdbaf378b40a9a72475077eb4a
+>>>>>>>> Stashed changes:Catour/Assets/Materials/Character/Cat/Catfishing2.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

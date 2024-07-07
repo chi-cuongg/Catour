@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
 guid: 7e0f71de9beeb0742b4533bec0340f0d
+=======
+guid: f93bc3875f92b464ea0679ee811c0bcf
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -132,7 +136,11 @@ ScriptedImporter:
       y: 4
       width: 19
       height: 26
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: e10ac40ba0d7dbe4bab8474ff60fd551
+=======
+    spriteID: f191c6c698cb03f478f20c954c01c60d
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -152,7 +160,11 @@ ScriptedImporter:
       y: 105
       width: 48
       height: 28
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: 136ede5942b90704899ac9efb5822cd0
+=======
+    spriteID: 14d5b4cf2d41fc444bf8c3d50eba16ad
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -172,7 +184,11 @@ ScriptedImporter:
       y: 73
       width: 65
       height: 24
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: e4153c8e36a300345aff507c2b5c9dc7
+=======
+    spriteID: 39a9c6e5a89aae7489532a10c46c5201
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -192,7 +208,11 @@ ScriptedImporter:
       y: 4
       width: 66
       height: 55
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: 0cca9da36883d7f48b896fa2ad0f4f0f
+=======
+    spriteID: 7fccc33a0c5dafd48ae0a607786a0c82
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -212,7 +232,11 @@ ScriptedImporter:
       y: 73
       width: 39
       height: 62
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: cbf26d2afb2a9804795542d00fe0bd2f
+=======
+    spriteID: 229ab6e8fbb31824f8bbd4116c809c86
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -232,7 +256,11 @@ ScriptedImporter:
       y: 4
       width: 66
       height: 61
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: ac616c894c842234aabd65f3d543c28c
+=======
+    spriteID: 7fd26ec9b0f26ab4688e289801bf42ef
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -252,7 +280,11 @@ ScriptedImporter:
       y: 4
       width: 65
       height: 61
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: fb6b3691deade7d488cff4fb1e5eabb9
+=======
+    spriteID: f6b60c2c853f21f489567c23ce12af8a
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -272,7 +304,11 @@ ScriptedImporter:
       y: 73
       width: 65
       height: 24
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: 1374472c6f400a841b923ae4c21b1af8
+=======
+    spriteID: a9ad129f0247a2549a76f5802d4a72cb
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +328,11 @@ ScriptedImporter:
       y: 105
       width: 49
       height: 28
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: cdc5092b452abaf498336dc5c08e8e03
+=======
+    spriteID: 35a7dcd710dfb00459c174d4ddfe67c2
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +352,11 @@ ScriptedImporter:
       y: 38
       width: 19
       height: 26
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
     spriteID: d4fb235b66f684f4f82dfeca4394a943
+=======
+    spriteID: 627ba2ea8e162024292393e742e0a732
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -338,7 +382,11 @@ ScriptedImporter:
         y: 45
         width: 50
         height: 50
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: e10ac40ba0d7dbe4bab8474ff60fd551
+=======
+      spriteId: f191c6c698cb03f478f20c954c01c60d
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_1
       frameIndex: 1
       additiveSortOrder: 0
@@ -347,7 +395,11 @@ ScriptedImporter:
         y: 56
         width: 48
         height: 28
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: 136ede5942b90704899ac9efb5822cd0
+=======
+      spriteId: 14d5b4cf2d41fc444bf8c3d50eba16ad
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_2
       frameIndex: 2
       additiveSortOrder: 0
@@ -356,7 +408,11 @@ ScriptedImporter:
         y: 56
         width: 65
         height: 24
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: e4153c8e36a300345aff507c2b5c9dc7
+=======
+      spriteId: 39a9c6e5a89aae7489532a10c46c5201
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_3
       frameIndex: 3
       additiveSortOrder: 0
@@ -365,7 +421,11 @@ ScriptedImporter:
         y: 25
         width: 66
         height: 55
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: 0cca9da36883d7f48b896fa2ad0f4f0f
+=======
+      spriteId: 7fccc33a0c5dafd48ae0a607786a0c82
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_4
       frameIndex: 4
       additiveSortOrder: 0
@@ -374,7 +434,11 @@ ScriptedImporter:
         y: 7
         width: 39
         height: 62
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: cbf26d2afb2a9804795542d00fe0bd2f
+=======
+      spriteId: 229ab6e8fbb31824f8bbd4116c809c86
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_5
       frameIndex: 5
       additiveSortOrder: 0
@@ -383,7 +447,11 @@ ScriptedImporter:
         y: 19
         width: 66
         height: 61
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: ac616c894c842234aabd65f3d543c28c
+=======
+      spriteId: 7fd26ec9b0f26ab4688e289801bf42ef
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_6
       frameIndex: 6
       additiveSortOrder: 0
@@ -392,7 +460,11 @@ ScriptedImporter:
         y: 19
         width: 65
         height: 61
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: fb6b3691deade7d488cff4fb1e5eabb9
+=======
+      spriteId: f6b60c2c853f21f489567c23ce12af8a
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_7
       frameIndex: 7
       additiveSortOrder: 0
@@ -401,7 +473,11 @@ ScriptedImporter:
         y: 56
         width: 65
         height: 24
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: 1374472c6f400a841b923ae4c21b1af8
+=======
+      spriteId: a9ad129f0247a2549a76f5802d4a72cb
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_8
       frameIndex: 8
       additiveSortOrder: 0
@@ -410,7 +486,11 @@ ScriptedImporter:
         y: 56
         width: 49
         height: 28
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: cdc5092b452abaf498336dc5c08e8e03
+=======
+      spriteId: 35a7dcd710dfb00459c174d4ddfe67c2
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     - name: Catfishing_Frame_9
       frameIndex: 9
       additiveSortOrder: 0
@@ -419,7 +499,11 @@ ScriptedImporter:
         y: 56
         width: 19
         height: 26
+<<<<<<< Updated upstream:Catour/Assets/Materials/Character/Cat/Catfishing.aseprite.meta
       spriteId: d4fb235b66f684f4f82dfeca4394a943
+=======
+      spriteId: 627ba2ea8e162024292393e742e0a732
+>>>>>>> Stashed changes:Catour/Assets/Materials/LevelPack/FishingGame/catfish/Catfishing.aseprite.meta
     linkedCells: []
     parentIndex: -1
   platformSettings: []
