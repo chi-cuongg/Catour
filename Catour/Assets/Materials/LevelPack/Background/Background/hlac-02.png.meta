@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD:Catour/Assets/Materials/UI/chamthan.png.meta
 <<<<<<<< Updated upstream:Catour/Assets/Materials/UI/chamthan.png.meta
 guid: 3287c4e498762e545b06d652c1aaecaf
@@ -8,6 +9,13 @@ guid: 0654fb7ed1656f64d86efd8489ccf148
 =======
 guid: b667efd2c6d022947998508707c87309
 >>>>>>> parent of 8b5a579 (update):Catour/Assets/Materials/LevelPack/Background/Background/hlac-02.png.meta
+=======
+<<<<<<<< HEAD:Catour/Assets/Materials/Character/Cat/Catfishing3.png.meta
+guid: 617cffdef5878db46a9cf5eadb92de71
+========
+guid: b667efd2c6d022947998508707c87309
+>>>>>>>> parent of 8b5a579 (update):Catour/Assets/Materials/LevelPack/Background/Background/hlac-02.png.meta
+>>>>>>> parent of 8b5a579 (update)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

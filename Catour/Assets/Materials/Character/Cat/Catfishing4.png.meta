@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Catour/Assets/Materials/Character/Cat/Catfishing4.png.meta
 guid: f19e49f8a729e354fbe4540ad562f08d
+========
+guid: cc1454b674005cb4b8b0861c93f68b8c
+>>>>>>>> parent of 8b5a579 (update):Catour/Assets/Materials/LevelPack/Background/Background/hoalac-02.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +73,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
