@@ -73,6 +73,12 @@ public class SpawnDinosaur : MonoBehaviour
     }
 
     public void Restart(){
-        scene.Restart();
+        if(scene != null) scene.Restart();
+        else SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Continue(){
+        if(scene != null) scene.Return();
+        else SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -54,6 +54,7 @@ public class NPCChatManager : MonoBehaviour
         if (npcChatPanel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
             ShowNextText();
+            Input.ResetInputAxes();
         }
     }
 

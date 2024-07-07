@@ -10,13 +10,15 @@ public class SceneChange : MonoBehaviour
     private int minigame;
     private List<GameObject> data = new List<GameObject>();
     private int key = 0;
-    private int require = 1; 
+    private int require = 1;
+    public Animator trans;
     // Start is called before the first frame update
     void Start()
     {
         if(scene == null){
             scene = this.gameObject;
             DontDestroyOnLoad(scene);
+            trans.enabled = true;
         }else Destroy(this.gameObject);
     }
 
@@ -28,38 +30,59 @@ public class SceneChange : MonoBehaviour
 
     public void NextScene(){
         require++;
+        StartCoroutine(Next());
+    }
+
+    IEnumerator Next(){
+        trans.SetBool("Trigger", true);
+        yield return new WaitForSeconds(1);
 
         if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         else SceneManager.LoadScene(0);
-    }
 
-    IEnumerator Load(){
-        AsyncOperation load = SceneManager.LoadSceneAsync(minigame, LoadSceneMode.Additive);
-        yield return load;
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(minigame));
+        trans.SetBool("Trigger", false);
     }
 
     public void MiniGame(int minigame){
         if(minigame >= 0){
             this.minigame = minigame;
             StartCoroutine(Load());
+        }
+    }
+    IEnumerator Load(){
+        trans.SetBool("Trigger", true);
+        yield return new WaitForSeconds(1);
 
-            foreach(GameObject g in GameObject.FindObjectsOfType<GameObject>()){
-                if(g.tag != "Scene"){
-                    g.SetActive(false);
-                    data.Add(g);
-                }
+        AsyncOperation load = SceneManager.LoadSceneAsync(minigame, LoadSceneMode.Additive);
+        foreach(GameObject g in GameObject.FindObjectsOfType<GameObject>()){
+            if(g.tag != "Scene"){
+                g.SetActive(false);
+                data.Add(g);
             }
         }
+
+        yield return load;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(minigame));
+
+        trans.SetBool("Trigger", false);
     }
 
     public void Return(){
+        StartCoroutine(Unload());
+    }
+
+    IEnumerator Unload(){
+        trans.SetBool("Trigger", true);
+        yield return new WaitForSeconds(1);
+
         foreach(GameObject g in data){
             if(g != null) g.SetActive(true);
         }
 
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+
+        trans.SetBool("Trigger", false);
     }
 
     public void Restart(){

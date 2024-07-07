@@ -55,7 +55,7 @@ public class Fishing : MonoBehaviour
                         if(index == 3){
                             text.text = "Congratulation!!!";
                             text.color = new Color(255, 255, 0, 255);
-                            scene.setKey();
+                            if(scene != null) scene.setKey();
                             Continue = false;
                         }else text.text = "Better luck next time!";
 
