@@ -30,6 +30,7 @@ public class SpawnObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Input.ResetInputAxes();
         scene = FindAnyObjectByType<SceneChange>();
 
         Spawn();
@@ -66,7 +67,7 @@ public class SpawnObject : MonoBehaviour
 
         if(restart){
             if(Input.GetKeyDown(KeyCode.Space)){
-                if(scene != null) scene.Return();
+                if(scene != null && !gameOver.isGameOver()) scene.Return();
                 else Restart();
             }
         }
@@ -96,6 +97,6 @@ public class SpawnObject : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        scene.Restart();
     }
 }

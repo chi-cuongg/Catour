@@ -29,7 +29,7 @@ public class FlappyJump : MonoBehaviour
     void FixedUpdate()
     {
         if(jump){
-            m_Rigidbody2D.velocity = Vector2.zero;
+            Control.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             m_Rigidbody2D.AddForce(Vector2.up * m_JumpForce);
             jump = false;
         }

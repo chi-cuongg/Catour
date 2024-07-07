@@ -14,7 +14,7 @@ public class BusStop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scene = FindAnyObjectByType<SceneChange>();
+        
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class BusStop : MonoBehaviour
         if(triggered){
             if(cat.GetComponent<Controller>().isControl()){
                 if(Input.GetKeyDown(KeyCode.F)){
-                    if(scene.getKey() >= 1){
+                    if(scene.getKey() >= scene.Require()){
                         transform.GetChild(0).gameObject.SetActive(false);
                         Instantiate(bus, new Vector3(transform.position.x + 10, transform.position.y - 1, transform.position.z), transform.rotation, gameObject.transform);
                         cat.GetComponent<Controller>().enableControl(false);
@@ -34,6 +34,7 @@ public class BusStop : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
+        scene = FindAnyObjectByType<SceneChange>();
         triggered = true;
         cat = other.gameObject;
         transform.GetChild(0).gameObject.SetActive(true);

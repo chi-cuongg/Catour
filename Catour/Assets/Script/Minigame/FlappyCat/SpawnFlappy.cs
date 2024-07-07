@@ -24,6 +24,7 @@ public class SpawnFlappy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Input.ResetInputAxes();
         scene = FindAnyObjectByType<SceneChange>();
     }
 
@@ -37,6 +38,8 @@ public class SpawnFlappy : MonoBehaviour
                 Control.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 Control.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
                 Control.enableControl(true);
+                Control.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                Control.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 200);
                 gameOver.setStart();
             }
         }
@@ -52,7 +55,7 @@ public class SpawnFlappy : MonoBehaviour
 
         if(!spawn){
             if(Input.GetKeyDown(KeyCode.Space)){
-                if(scene != null) scene.Return();
+                if(scene != null && !gameOver.isGameOver()) scene.Return();
                 else Restart();
             }
         }
@@ -76,6 +79,7 @@ public class SpawnFlappy : MonoBehaviour
     }
 
     public void Restart(){
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if(scene != null) scene.Restart();
+        else SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 }

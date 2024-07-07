@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Right : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Right : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scene = FindAnyObjectByType<SceneChange>();
+        
     }
 
     // Update is called once per frame
@@ -18,12 +19,16 @@ public class Right : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(triggered);
         if(triggered){ 
             if(Input.GetKeyDown(KeyCode.F)){
-                if(scene != null) scene.NextScene();
+                if(scene.getKey() >= scene.Require()){
+                    scene.NextScene();
+                    triggered = false;
+                }
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        scene = FindAnyObjectByType<SceneChange>();
         triggered = true;
     }
 

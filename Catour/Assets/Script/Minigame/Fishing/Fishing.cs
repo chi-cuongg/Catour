@@ -26,6 +26,7 @@ public class Fishing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Input.ResetInputAxes();
         scene = FindAnyObjectByType<SceneChange>();
     }
 

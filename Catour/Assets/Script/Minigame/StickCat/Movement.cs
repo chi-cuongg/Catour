@@ -41,7 +41,9 @@ public class Movement : MonoBehaviour
     }
 
     private void OnDestroy() {
-        if(gameOver != null)
+        if(gameOver != null){
+            gameObject.GetComponent<Controller>().enableControl(false);
             gameOver.setGameOver();
+        }
     }
 }

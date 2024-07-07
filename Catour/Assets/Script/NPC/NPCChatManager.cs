@@ -12,8 +12,6 @@ public class NPCChatManager : MonoBehaviour
     public int minigame;
     void Start()
     {
-        scene = FindAnyObjectByType<SceneChange>();
-
         if (npcChatPanel == null)
         {
             Debug.LogError("NPC Chat Panel is not assigned in the inspector.");
@@ -42,8 +40,8 @@ public class NPCChatManager : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     transform.GetChild(0).gameObject.SetActive(false);
-                    ToggleChat();
                     cat.GetComponent<Controller>().enableControl(false);
+                    ToggleChat();
                 }
             }
         }
@@ -69,18 +67,23 @@ public class NPCChatManager : MonoBehaviour
     {
         HideAllTexts();  // Ẩn tất cả các Text hiện tại
 
-        if (currentTextIndex < chatTexts.Length)
-        {
-            chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
-            currentTextIndex++;
-        }
-        else
-        {
-            // Nếu đã đến đoạn chat cuối cùng, có thể đóng khung chat hoặc lặp lại từ đầu
+        if(scene.getKey() < scene.Require()){
+            if (currentTextIndex < chatTexts.Length)
+            {
+                chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
+                currentTextIndex++;
+            }
+            else
+            {
+                // Nếu đã đến đoạn chat cuối cùng, có thể đóng khung chat hoặc lặp lại từ đầu
+                npcChatPanel.SetActive(false);
+                currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
+                cat.GetComponent<Controller>().enableControl(true);
+                if(scene != null) scene.MiniGame(minigame);
+            }
+        }else{
             npcChatPanel.SetActive(false);
-            currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
             cat.GetComponent<Controller>().enableControl(true);
-            if(scene != null) scene.MiniGame(minigame);
         }
     }
 
@@ -93,6 +96,7 @@ public class NPCChatManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        scene = FindAnyObjectByType<SceneChange>();
         triggered = true;
         cat = other.gameObject;
         transform.GetChild(0).gameObject.SetActive(true);
@@ -100,7 +104,6 @@ public class NPCChatManager : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         triggered = false;
-        cat = null;
         transform.GetChild(0).gameObject.SetActive(false);
     }
 }

@@ -22,6 +22,6 @@ public class CamStop : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        cam.enabled = true;
+        if(cam != null) cam.enabled = true;
     }
 }

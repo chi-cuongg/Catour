@@ -428,7 +428,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ab7c871bd0e349d44802ee5cd47a778e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 44c3fdf91678a22488df260ccec6b3b9, type: 2}
   m_sharedMaterial: {fileID: 21175996417216586, guid: ab7c871bd0e349d44802ee5cd47a778e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &309461503
@@ -1045,7 +1045,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   gameOverText: {fileID: 1081686044}
   congratulationText: {fileID: 1353162387}
   Loop: 0
-  targetScore: 10
+  targetScore: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

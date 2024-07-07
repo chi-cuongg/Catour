@@ -9,6 +9,7 @@ public class StickController : MonoBehaviour
     private bool isExtending = false;
     private bool isRotating = false;
     private bool control = true;
+    private Controller controller;
     private Vector3 axisPoint;
     private SpawnObject spawn;
     private GameObject cat;
@@ -17,11 +18,12 @@ public class StickController : MonoBehaviour
     {
         spawn = GameObject.Find("GameManager").GetComponent<SpawnObject>();
         cat = GameObject.Find("Cat");
+        controller = cat.GetComponent<Controller>();
     }
 
     void Update()
     {
-        if(control){
+        if(control && controller.isControl()){
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isExtending = true;
@@ -62,6 +64,6 @@ public class StickController : MonoBehaviour
     private void Move(){
         isRotating = false;
         spawn.Next();
-        cat.GetComponent<Movement>().Move(this.gameObject);
+        if(cat != null) cat.GetComponent<Movement>().Move(this.gameObject);
     }
 }
