@@ -34,7 +34,7 @@ public class CharacterController2D : MonoBehaviour
 	private void FixedUpdate()
 	{
 		if(colliders != null){
-			if (colliders.gameObject != gameObject && gameObject != null)
+			if (colliders.gameObject != gameObject)
 			{
 				m_Grounded = true;
 				colliders = null;

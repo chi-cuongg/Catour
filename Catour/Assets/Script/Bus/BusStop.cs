@@ -11,7 +11,6 @@ public class BusStop : MonoBehaviour
     private bool triggered = false;
     private GameObject cat;
     private SceneChange scene;
-    public ChatText text;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +27,7 @@ public class BusStop : MonoBehaviour
                         transform.GetChild(0).gameObject.SetActive(false);
                         Instantiate(bus, new Vector3(transform.position.x + 10, transform.position.y - 1, transform.position.z), transform.rotation, gameObject.transform);
                         cat.GetComponent<Controller>().enableControl(false);
-                    }else{
-                        text.Text("Bạn cần vé xe để lên xe bus");
                     }
-                }
-            }else{
-                if(Input.GetKeyDown(KeyCode.Space)){
-                    text.endText();
                 }
             }
         }
