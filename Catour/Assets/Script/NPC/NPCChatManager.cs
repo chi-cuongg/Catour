@@ -12,18 +12,6 @@ public class NPCChatManager : MonoBehaviour
     public int minigame;
     void Start()
     {
-        if (npcChatPanel == null)
-        {
-            Debug.LogError("NPC Chat Panel is not assigned in the inspector.");
-            return;
-        }
-
-        if (chatTexts == null || chatTexts.Length == 0)
-        {
-            Debug.LogError("Chat Texts are not assigned in the inspector.");
-            return;
-        }
-
         // Ẩn khung chat và tất cả các Text khi bắt đầu
         npcChatPanel.SetActive(false);
         HideAllTexts();

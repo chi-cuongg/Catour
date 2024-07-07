@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2442285854504643042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -387,9 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npcChatPanel: {fileID: 863764894059554985}
-  chatTexts:
-  - {fileID: 0}
-  - {fileID: 0}
+  chatTexts: []
   minigame: 0
 --- !u!61 &4486742109243381275
 BoxCollider2D:
@@ -503,8 +501,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a2a002356c76fea4290c8397a82a4bd2, type: 2}
-  m_sharedMaterial: {fileID: 7252075760796883535, guid: a2a002356c76fea4290c8397a82a4bd2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
+  m_sharedMaterial: {fileID: 8686315656499513574, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

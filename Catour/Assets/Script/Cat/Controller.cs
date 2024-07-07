@@ -20,6 +20,7 @@ public class Controller : MonoBehaviour
 
     public void enableControl(bool Control){
         transform.gameObject.GetComponent<Animator>().enabled = Control;
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         this.Control = Control;
     }
 
