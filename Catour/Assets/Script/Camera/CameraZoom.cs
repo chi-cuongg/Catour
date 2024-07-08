@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class CameraZoom : MonoBehaviour
 {
-    public float speed;
+    public float speed = 5;
     private float minZoom;
-    public float maxZoom = 100f;
+    public float maxZoom = 10;
     private Camera cam;
     private float initialSize;
     private float newSize;
@@ -57,10 +57,10 @@ public class CameraZoom : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        trigger = true;
+        if(other.tag == "Zoom") trigger = true;
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        trigger = false;
+        if(other.tag =="Zoom") trigger = false;
     }
 }

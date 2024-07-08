@@ -9,6 +9,7 @@ TagManager:
   - Square
   - Node
   - Scene
+  - Zoom
   layers:
   - Default
   - TransparentFX
