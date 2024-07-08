@@ -97,11 +97,13 @@ public class SpawnObject : MonoBehaviour
     }
 
     public void Restart(){
+        this.enabled = false;
         if(scene != null) scene.Restart();
         else SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Continue(){
+        this.enabled = false;
         if(scene != null) scene.Return();
         else SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }

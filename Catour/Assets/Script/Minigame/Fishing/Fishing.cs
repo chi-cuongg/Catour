@@ -114,6 +114,7 @@ public class Fishing : MonoBehaviour
     }
 
     private void Restart(){
+        this.enabled = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
