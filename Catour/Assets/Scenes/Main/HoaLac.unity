@@ -1012,7 +1012,7 @@ GameObject:
   - component: {fileID: 912256808}
   - component: {fileID: 912256807}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Zoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1030,7 +1030,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0db536fecdb38c64db8cd281eb62e667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxZoom: 100
+  speed: 5
+  maxZoom: 10
 --- !u!61 &912256808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1060,7 +1061,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1136,12 +1137,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912256806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: -5.4, z: 0}
-  m_LocalScale: {x: 39.938, y: 39.938, z: 39.938}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.9213, y: -4.8, z: 0}
+  m_LocalScale: {x: 21.841677, y: 39.938, z: 39.938}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1452949960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070417781
 GameObject:
@@ -1439,6 +1440,7 @@ RectTransform:
   - {fileID: 2100774380}
   - {fileID: 820274330}
   - {fileID: 1701634279}
+  - {fileID: 912256810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2219,4 +2221,3 @@ SceneRoots:
   - {fileID: 1467456546}
   - {fileID: 1070417785}
   - {fileID: 2104113451}
-  - {fileID: 912256810}
