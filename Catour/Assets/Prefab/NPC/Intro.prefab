@@ -331,12 +331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0110\u1EA1i h\u1ECDc FPT-m\u1ED9t trong nh\u1EEFng ng\xF4i tr\u01B0\u1EDDng
-    \u0111\u1EA1i h\u1ECDc h\xE0ng \u0111\u1EA7u t\u1EA1i Vi\u1EC7t Nam. T\u1EA1i
-    \u0111\xE2y, ch\xFAng t\xF4i cung c\u1EA5p m\xF4i tr\u01B0\u1EDDng h\u1ECDc t\u1EADp
-    hi\u1EC7n \u0111\u1EA1i, ch\u01B0\u01A1ng tr\xECnh gi\u1EA3ng d\u1EA1y ti\xEAn
-    ti\u1EBFn v\xE0 c\u01A1 h\u1ED9i th\u1EF1c t\u1EADp, l\xE0m vi\u1EC7c t\u1EA1i
-    c\xE1c doanh nghi\u1EC7p h\xE0ng \u0111\u1EA7u."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
   m_sharedMaterial: {fileID: 8686315656499513574, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
