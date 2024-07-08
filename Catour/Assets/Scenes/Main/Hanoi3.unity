@@ -1763,10 +1763,46 @@ PrefabInstance:
       propertyPath: m_text
       value: "T\xF4i th\xE8m r\xEDt 1 \u0111i\u1EBFu qu\xE1!"
       objectReference: {fileID: 0}
+    - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7306086
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_Size.y
+      value: 3.5250995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.13144618
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.01860249
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.96
+      objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: minigame
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1550081993}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 858191456}
     - target: {fileID: 4746187643446180479, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.544318
@@ -1821,7 +1857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7265099098415974011, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1834,6 +1870,11 @@ PrefabInstance:
 --- !u!224 &1550081992 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2442285854504643042, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+  m_PrefabInstance: {fileID: 1550081991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1550081993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7265099098415974011, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
   m_PrefabInstance: {fileID: 1550081991}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1642967054

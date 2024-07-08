@@ -786,6 +786,14 @@ PrefabInstance:
         bi\u1EC3u t\u01B0\u1EE3ng v\u0103n h\xF3a v\xE0 ngh\u1EC7 thu\u1EADt c\u1EE7a
         th\u1EE7 \u0111\xF4."
       objectReference: {fileID: 0}
+    - target: {fileID: 925289465640330329, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 925289465640330329, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 2915463852807425547, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1401.04
@@ -797,6 +805,10 @@ PrefabInstance:
     - target: {fileID: 4010894919312340262, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_Name
       value: Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6760793223573711363, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_IsActive
@@ -1223,7 +1235,7 @@ Transform:
   m_GameObject: {fileID: 794525759}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 2.55, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1699,8 +1711,8 @@ MonoBehaviour:
   chatTexts:
   - {fileID: 395277709}
   - {fileID: 270988606}
-  change: 0
-  minigame: 0
+  change: 1
+  minigame: 9
 --- !u!212 &1289457416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2550,6 +2562,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7265099098415974011, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8150981187550294144, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
