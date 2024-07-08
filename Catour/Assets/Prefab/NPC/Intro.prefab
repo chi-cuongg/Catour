@@ -220,7 +220,7 @@ MonoBehaviour:
   chatTexts:
   - {fileID: 5905781032490152853}
   change: 0
-  minigame: 7
+  minigame: 0
 --- !u!61 &2250560099575160631
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8894662528570306967
 RectTransform:
   m_ObjectHideFlags: 0

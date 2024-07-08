@@ -16,14 +16,16 @@ public class NPCChatManager : MonoBehaviour
         // Ẩn khung chat và tất cả các Text khi bắt đầu
         npcChatPanel.SetActive(false);
         HideAllTexts();
+
+        scene = FindAnyObjectByType<SceneChange>();
     }
 
     void Update()
     {
         if (npcChatPanel.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F)))
         {
-            ShowNextText();
             Input.ResetInputAxes();
+            ShowNextText();
         }
 
         if (triggered)
@@ -32,7 +34,7 @@ public class NPCChatManager : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    if(!change) transform.GetChild(0).gameObject.SetActive(false);
+                    transform.GetChild(0).gameObject.SetActive(false);
                     cat.GetComponent<Controller>().enableControl(false);
                     ToggleChat();
                 }
@@ -51,7 +53,6 @@ public class NPCChatManager : MonoBehaviour
         HideAllTexts();  // Ẩn tất cả các Text hiện tại
 
         if((scene.getKey() < scene.Require()) || !change){
-            Debug.Log(currentTextIndex < chatTexts.Length);
             if (currentTextIndex < chatTexts.Length)
             {
                 chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
@@ -63,6 +64,7 @@ public class NPCChatManager : MonoBehaviour
                 npcChatPanel.SetActive(false);
                 currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
                 cat.GetComponent<Controller>().enableControl(true);
+
                 if(scene != null && change){ 
                     this.enabled = false;
                     scene.MiniGame(minigame);
@@ -80,7 +82,6 @@ public class NPCChatManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        scene = FindAnyObjectByType<SceneChange>();
         triggered = true;
         cat = other.gameObject;
         transform.GetChild(0).gameObject.SetActive(true);
@@ -88,6 +89,7 @@ public class NPCChatManager : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         triggered = false;
+        cat = null;
         transform.GetChild(0).gameObject.SetActive(false);
     }
 }

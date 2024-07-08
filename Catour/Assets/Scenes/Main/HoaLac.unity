@@ -2411,9 +2411,17 @@ PrefabInstance:
         t\u1EBF, v\xE0 qu\u1EA3n tr\u1ECB kinh doanh, c\xF9ng v\u1EDBi m\xF4i tr\u01B0\u1EDDng
         h\u1ECDc t\u1EADp hi\u1EC7n \u0111\u1EA1i v\xE0 qu\u1ED1c t\u1EBF h\xF3a."
       objectReference: {fileID: 0}
+    - target: {fileID: 3095044804282451972, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4010894919312340262, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_Name
       value: Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6760793223573711363, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_IsActive
