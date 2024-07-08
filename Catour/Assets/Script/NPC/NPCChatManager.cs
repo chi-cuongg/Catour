@@ -20,28 +20,23 @@ public class NPCChatManager : MonoBehaviour
 
     void Update()
     {
+        if (npcChatPanel.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F)))
+        {
+            ShowNextText();
+            Input.ResetInputAxes();
+        }
+
         if (triggered)
         {
             if (cat.GetComponent<Controller>().isControl())
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    transform.GetChild(0).gameObject.SetActive(false);
+                    if(!change) transform.GetChild(0).gameObject.SetActive(false);
                     cat.GetComponent<Controller>().enableControl(false);
                     ToggleChat();
                 }
             }
-        }
-
-        // if (Input.GetKeyDown(KeyCode.F))
-        // {
-        //     ToggleChat();
-        // }
-
-        if (npcChatPanel.activeSelf && Input.GetKeyDown(KeyCode.Space))
-        {
-            ShowNextText();
-            Input.ResetInputAxes();
         }
     }
 
@@ -56,6 +51,7 @@ public class NPCChatManager : MonoBehaviour
         HideAllTexts();  // Ẩn tất cả các Text hiện tại
 
         if((scene.getKey() < scene.Require()) || !change){
+            Debug.Log(currentTextIndex < chatTexts.Length);
             if (currentTextIndex < chatTexts.Length)
             {
                 chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
@@ -72,9 +68,6 @@ public class NPCChatManager : MonoBehaviour
                     scene.MiniGame(minigame);
                 }
             }
-        }else{
-            npcChatPanel.SetActive(false);
-            cat.GetComponent<Controller>().enableControl(true);
         }
     }
 
