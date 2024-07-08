@@ -21,36 +21,35 @@ public class BusStop : MonoBehaviour
     void Update()
     {
         if(triggered){
-            Debug.Log(cat.GetComponent<Controller>().isControl());
             if(cat.GetComponent<Controller>().isControl()){
                 if(Input.GetKeyDown(KeyCode.F)){
                     if(scene.getKey() >= scene.Require()){
                         this.enabled = false;
+                        transform.GetChild(0).gameObject.SetActive(false);
                         Instantiate(bus, new Vector3(transform.position.x + 10, transform.position.y - 1, transform.position.z), transform.rotation, gameObject.transform);
                         cat.GetComponent<Controller>().enableControl(false);
-                        triggered = false;
                     }else{
-                        text.Text("Bạn cần vé xe để lên xe bus.");
+                        text.Text("Bạn cần vé xe để lên xe bus");
                     }
                 }
             }else{
-                if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F)){
+                if(Input.GetKeyDown(KeyCode.Space)){
                     text.endText();
                 }
             }
         }
-
-        transform.GetChild(0).gameObject.SetActive(triggered);
     }
 
     private void OnTriggerEnter2D(Collider2D other){
         scene = FindAnyObjectByType<SceneChange>();
         triggered = true;
         cat = other.gameObject;
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         triggered = false;
         cat = null;
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 }
