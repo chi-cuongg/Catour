@@ -25,6 +25,7 @@ public class BusStop : MonoBehaviour
             if(cat.GetComponent<Controller>().isControl()){
                 if(Input.GetKeyDown(KeyCode.F)){
                     if(scene.getKey() >= scene.Require()){
+                        this.enabled = false;
                         transform.GetChild(0).gameObject.SetActive(false);
                         Instantiate(bus, new Vector3(transform.position.x + 10, transform.position.y - 1, transform.position.z), transform.rotation, gameObject.transform);
                         cat.GetComponent<Controller>().enableControl(false);

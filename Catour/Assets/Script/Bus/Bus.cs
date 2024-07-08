@@ -32,7 +32,7 @@ public class Bus : MonoBehaviour
 
         if(transform.position.x <= busStop.transform.position.x - 15){
             Destroy(gameObject);
-            scene.NextScene();
+            if(scene != null) scene.NextScene();
         }
     }
 

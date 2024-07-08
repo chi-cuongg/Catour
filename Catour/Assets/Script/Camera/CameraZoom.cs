@@ -11,6 +11,7 @@ public class CameraZoom : MonoBehaviour
     private float initialSize;
     private float initialPosY;
     private float initialBottomY;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class CameraZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

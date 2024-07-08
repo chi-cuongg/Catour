@@ -20,9 +20,10 @@ public class Right : MonoBehaviour
         if(triggered){ 
             if(Input.GetKeyDown(KeyCode.F)){
                 if(scene.getKey() >= scene.Require()){
+                    this.enabled = false;
                     scene.NextScene();
                     triggered = false;
-                }
+                }else triggered = false;
             }
         }
     }

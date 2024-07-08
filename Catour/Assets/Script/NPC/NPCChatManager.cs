@@ -68,7 +68,10 @@ public class NPCChatManager : MonoBehaviour
                 npcChatPanel.SetActive(false);
                 currentTextIndex = 0;  // Hoặc thiết lập lại về 0 nếu muốn lặp lại
                 cat.GetComponent<Controller>().enableControl(true);
-                if(scene != null) scene.MiniGame(minigame);
+                if(scene != null){ 
+                    this.enabled = false;
+                    scene.MiniGame(minigame);
+                }
             }
         }else{
             npcChatPanel.SetActive(false);
