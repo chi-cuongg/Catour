@@ -25,15 +25,6 @@ public class Bus : MonoBehaviour
         }else{
             waitedTime += Time.deltaTime;
         }
-
-        if(waitedTime >= waitingTime){
-            Move();
-        }
-
-        if(transform.position.x <= busStop.transform.position.x - 15){
-            Destroy(gameObject);
-            if(scene != null) scene.NextScene();
-        }
     }
 
     public void Move(){
@@ -41,6 +32,6 @@ public class Bus : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        other.GetComponent<Renderer>().material.color = Color.clear;
+        if(scene != null) scene.NextScene();
     }
 }
