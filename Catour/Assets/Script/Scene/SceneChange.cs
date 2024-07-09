@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class SceneChange : MonoBehaviour
 {
     public static GameObject scene;
-    private int minigame;
+    private string minigame;
     private GameObject mini;
     private List<GameObject> data = new List<GameObject>();
-    private int key = 0;
+    public int key = 0;
     private int require = 1;
     public Animator trans;
     // Start is called before the first frame update
@@ -38,19 +38,17 @@ public class SceneChange : MonoBehaviour
         trans.SetBool("Trigger", true);
         yield return new WaitForSeconds(1);
 
-        if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings){
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        else SceneManager.LoadScene(0);
+        }else SceneManager.LoadScene(0);
 
         trans.SetBool("Trigger", false);
     }
 
-    public void MiniGame(int minigame, GameObject mini){
-        if(minigame >= 0){
-            this.minigame = minigame;
-            StartCoroutine(Load());
-            this.mini = mini;
-        }
+    public void MiniGame(string minigame, GameObject mini){
+        this.minigame = minigame;
+        StartCoroutine(Load());
+        this.mini = mini;
     }
     IEnumerator Load(){
         trans.SetBool("Trigger", true);
@@ -65,7 +63,7 @@ public class SceneChange : MonoBehaviour
         }
 
         yield return load;
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(minigame));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(minigame));
 
         trans.SetBool("Trigger", false);
     }
@@ -103,5 +101,10 @@ public class SceneChange : MonoBehaviour
 
     public int Require(){
         return require;
+    }
+
+    public void Reset(){
+        SceneManager.LoadSceneAsync(0);
+        Destroy(this.gameObject);
     }
 }

@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main/HoaLac.unity
     guid: cc561aed4d51de149b48888c5b13cefc
   - enabled: 1
-    path: Assets/Scenes/UI/BusStop.unity
-    guid: 4063b58c9f32fd04dae8dab5990610ff
-  - enabled: 1
     path: Assets/Scenes/Main/Hanoi.unity
     guid: 4443c4ecd31586f448a58709c19527d1
   - enabled: 1

@@ -17,7 +17,7 @@ public class SpawnFlappy : MonoBehaviour
     private bool spawn = true;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI congratulationText;
-    public bool Loop = false;
+    public bool Loop = true;
     private int score = 0;
     public int targetScore;
     private SceneChange scene;
@@ -26,6 +26,7 @@ public class SpawnFlappy : MonoBehaviour
     {
         Input.ResetInputAxes();
         scene = FindAnyObjectByType<SceneChange>();
+        if(scene != null) Loop = false;
     }
 
     // Update is called once per frame

@@ -21,7 +21,7 @@ public class SpawnObject : MonoBehaviour
     public float spawnMax;
     private int score = -1;
     public int targetScore;
-    public bool Loop = false;
+    public bool Loop = true;
     private bool restart = false;
     public GameOver gameOver;
     public TextMeshProUGUI gameOverText;
@@ -32,6 +32,7 @@ public class SpawnObject : MonoBehaviour
     {
         Input.ResetInputAxes();
         scene = FindAnyObjectByType<SceneChange>();
+        if(scene != null) Loop = false;
 
         Spawn();
         Object1 = Object2;

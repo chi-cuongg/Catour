@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class VideoEndSceneChanger : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
+    private SceneChange scene;
     void Start()
     {
         if (videoPlayer == null)
@@ -20,12 +21,17 @@ public class VideoEndSceneChanger : MonoBehaviour
         {
             Debug.LogError("VideoPlayer component not found.");
         }
+
+        scene = FindAnyObjectByType<SceneChange>();
     }
 
     void OnVideoEnd(VideoPlayer vp)
     {
-        if(SceneManager.GetActiveScene().buildIndex != 7)
+        if(SceneManager.GetActiveScene().buildIndex != 6)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        else SceneManager.LoadScene(0);
+        else{ 
+            SceneManager.LoadSceneAsync(0);
+            if(scene != null) scene.Reset();
+        }
     }
 }

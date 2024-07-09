@@ -16,7 +16,7 @@ public class SpawnDinosaur : MonoBehaviour
     private bool spawn = true;
     public TextMeshProUGUI gameOverText;
     public TextMeshProUGUI congratulationText;
-    public bool Loop = false;
+    public bool Loop = true;
     private int score = 0;
     public int targetScore;
     private SceneChange scene;
@@ -25,6 +25,7 @@ public class SpawnDinosaur : MonoBehaviour
     {
         Input.ResetInputAxes();
         scene = FindAnyObjectByType<SceneChange>();
+        if(scene != null) Loop = false;
         Control.enableControl(false);
     }
 

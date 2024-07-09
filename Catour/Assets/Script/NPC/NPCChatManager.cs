@@ -11,7 +11,7 @@ public class NPCChatManager : MonoBehaviour
     private GameObject cat;
     private SceneChange scene;
     public bool change = true;
-    public int minigame;
+    public string minigame;
     void Start()
     {
         // Ẩn khung chat và tất cả các Text khi bắt đầu
