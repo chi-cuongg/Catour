@@ -442,8 +442,8 @@ PrefabInstance:
         ng\xF4i ch\xF9a nh\u1ECF \u0111\u1EB7t tr\xEAn c\u1ED9t \u0111\xE1 gi\u1EEFa
         h\u1ED3 sen. Ch\xF9a \u0111\u01B0\u1EE3c coi l\xE0 bi\u1EC3u t\u01B0\u1EE3ng
         v\u0103n h\xF3a v\xE0 l\u1ECBch s\u1EED, g\u1EAFn li\u1EC1n v\u1EDBi truy\u1EC1n
-        thuy\u1EBFt v\u1EC1 gi\u1EA5c m\u01A1 c\u1EE7a vua L\xFD v\xE0 mang \xFD
-        ngh\u0129a t\xE2m linh s\xE2u s\u1EAFc."
+        thuy\u1EBFt v\u1EC1 gi\u1EA5c m\u01A1 c\u1EE7a vua L\xFD Th\xE1i T\xF4ng
+        g\u1EB7p Quan \xC2m v\xE0 mang \xFD ngh\u0129a t\xE2m linh s\xE2u s\u1EAFc."
       objectReference: {fileID: 0}
     - target: {fileID: 925289465640330329, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_fontSize
@@ -1993,9 +1993,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 3929452082143908413, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.13
+      objectReference: {fileID: 0}
     - target: {fileID: 4274608916106057636, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_text
-      value: "Th\xE8m r\xEDt 1 \u0111i\u1EBFu qu\xE1!"
+      value: "Th\xE8m r\xEDt m\u1ED9t \u0111i\u1EBFu qu\xE1!"
       objectReference: {fileID: 0}
     - target: {fileID: 4486742109243381275, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_Size.x
@@ -2021,6 +2025,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.96
       objectReference: {fileID: 0}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: endText
+      value: 
+      objectReference: {fileID: 1997955596}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: minigame
       value: 11
@@ -2090,6 +2098,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7265099098415974011, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8150981187550294144, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

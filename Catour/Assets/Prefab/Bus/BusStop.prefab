@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6797731327057488158}
   - component: {fileID: 4293356779744574799}
   - component: {fileID: 4077798439218235531}
-  - component: {fileID: 2728198401319442601}
   m_Layer: 0
   m_Name: BusStop
   m_TagString: Bus Stop
@@ -135,16 +134,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.390362, y: 3.6}
   m_EdgeRadius: 0
---- !u!114 &2728198401319442601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342136726966424400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0e809628769d14c837c7d09e58fb4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bus: {fileID: 6254557512861230305, guid: b0fcaebf7fc076d4bae90b2f97bcd428, type: 3}

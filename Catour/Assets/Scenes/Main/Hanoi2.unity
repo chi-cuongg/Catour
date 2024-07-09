@@ -330,7 +330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Con di\u1EC1u c\u1EE7a t\xF4i b\u1ECB v\u01B0\u1EDBng tr\xEAn c\xE2y r\u1ED3i!"
+  m_text: "Con di\u1EC1u c\u1EE7a em b\u1ECB v\u01B0\u1EDBng tr\xEAn c\xE2y r\u1ED3i!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
   m_sharedMaterial: {fileID: 8686315656499513574, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
@@ -967,8 +967,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\u1EA3m \u01A1n b\u1EA1n \u0111\xE3 gi\u1EA3i c\u1EE9u con di\u1EC1u
-    c\u1EE7a t\xF4i!"
+  m_text: "C\u1EA3m \u01A1n anh m\xE8o \u0111\xE3 l\u1EA5y l\u1EA1i con di\u1EC1u
+    cho em!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
   m_sharedMaterial: {fileID: 8686315656499513574, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "B\u1EA1n c\xF3 th\u1EC3 tr\xE8o l\xEAn gi\xFAp t\xF4i l\u1EA5y l\u1EA1i
+  m_text: "Anh m\xE8o c\xF3 th\u1EC3 tr\xE8o l\xEAn gi\xFAp em l\u1EA5y l\u1EA1i
     \u0111\u01B0\u1EE3c kh\xF4ng?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41ec1285a62b0f84a9f25b25a06f7a2e, type: 2}
@@ -2704,10 +2704,10 @@ PrefabInstance:
       value: "Nh\xE0 th\u1EDD L\u1EDBn H\xE0 N\u1ED9i, kh\xE1nh th\xE0nh n\u0103m
         1886, l\xE0 m\u1ED9t c\xF4ng tr\xECnh ki\u1EBFn tr\xFAc Gothic n\u1EB1m \u1EDF
         trung t\xE2m th\u1EE7 \u0111\xF4. \u0110\xE2y l\xE0 nh\xE0 th\u1EDD ch\xEDnh
-        t\xF2a c\u1EE7a T\u1ED5ng gi\xE1o ph\u1EADn H\xE0 N\u1ED9i, n\u01A1i di\u1EC5n
-        ra nhi\u1EC1u ho\u1EA1t \u0111\u1ED9ng t\xF4n gi\xE1o quan tr\u1ECDng. Nh\xE0
-        th\u1EDD n\u1ED5i b\u1EADt v\u1EDBi ki\u1EBFn tr\xFAc c\u1ED5 k\xEDnh, th\xE1p
-        chu\xF4ng cao v\xE0 c\xE1c c\u1EEDa s\u1ED5 k\xEDnh m\xE0u."
+        t\xF2a c\u1EE7a T\u1ED5ng gi\xE1o ph\u1EADn H\xE0 N\u1ED9i, l\xE0 n\u01A1i
+        di\u1EC5n ra nhi\u1EC1u ho\u1EA1t \u0111\u1ED9ng t\xF4n gi\xE1o quan tr\u1ECDng.
+        Nh\xE0 th\u1EDD n\u1ED5i b\u1EADt v\u1EDBi ki\u1EBFn tr\xFAc c\u1ED5 k\xEDnh,
+        th\xE1p chu\xF4ng cao v\xE0 c\xE1c c\u1EEDa s\u1ED5 k\xEDnh m\xE0u."
       objectReference: {fileID: 0}
     - target: {fileID: 4010894919312340262, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
       propertyPath: m_Name

@@ -31,7 +31,6 @@ public class ChatText : MonoBehaviour
     public void endText(){
         panel.SetActive(false);
         text.gameObject.SetActive(false);
-        text.text = "";
         Input.ResetInputAxes();
         cat.GetComponent<Controller>().enableControl(true);
         isT = false;

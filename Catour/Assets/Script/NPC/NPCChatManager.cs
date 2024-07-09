@@ -17,8 +17,6 @@ public class NPCChatManager : MonoBehaviour
         // Ẩn khung chat và tất cả các Text khi bắt đầu
         npcChatPanel.SetActive(false);
         HideAllTexts();
-
-        scene = FindAnyObjectByType<SceneChange>();
     }
 
     void Update()
@@ -93,6 +91,8 @@ public class NPCChatManager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        scene = FindAnyObjectByType<SceneChange>();
+
         triggered = true;
         cat = other.gameObject;
         transform.GetChild(0).gameObject.SetActive(true);
