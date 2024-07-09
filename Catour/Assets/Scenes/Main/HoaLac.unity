@@ -1599,7 +1599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: chatTexts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: chatTexts.Array.data[0]
@@ -1609,6 +1609,10 @@ PrefabInstance:
       propertyPath: chatTexts.Array.data[1]
       value: 
       objectReference: {fileID: 222092889}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 636768810}
     - target: {fileID: 4746187643446180479, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06
@@ -2593,11 +2597,24 @@ PrefabInstance:
       propertyPath: change
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 4467729305412860067}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+--- !u!1 &4467729305412860067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+  m_PrefabInstance: {fileID: 4467729305412860066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

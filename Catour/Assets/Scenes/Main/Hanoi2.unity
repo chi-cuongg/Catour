@@ -218,6 +218,7 @@ MonoBehaviour:
   chatTexts:
   - {fileID: 56107303}
   - {fileID: 1637670605}
+  - {fileID: 431760857}
   endText: {fileID: 431760857}
   change: 1
   minigame: 10
@@ -905,11 +906,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 416277476}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+--- !u!1 &416277476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+  m_PrefabInstance: {fileID: 416277475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &431760857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,11 +2731,24 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1822135059}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+--- !u!1 &1822135059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+  m_PrefabInstance: {fileID: 1822135058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1826113686
 GameObject:
   m_ObjectHideFlags: 0
@@ -3184,10 +3211,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: chatTexts.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: chatTexts.Array.data[0]
+      value: 
+      objectReference: {fileID: 8170355210002640811}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.data[1]
       value: 
       objectReference: {fileID: 8170355210002640811}
     - target: {fileID: 4746187643446180479, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}

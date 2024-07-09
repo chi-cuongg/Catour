@@ -1277,6 +1277,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &622852307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+  m_PrefabInstance: {fileID: 2031739447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &708966361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4746187643446180479, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
@@ -2149,6 +2154,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1565080551 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905781032490152853, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+  m_PrefabInstance: {fileID: 1640182898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1566257326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2432,6 +2442,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1565080551}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2759,6 +2777,7 @@ MonoBehaviour:
   npcChatPanel: {fileID: 1804218515}
   chatTexts:
   - {fileID: 2014676030}
+  - {fileID: 2014676030}
   endText: {fileID: 0}
   change: 0
   minigame: 0
@@ -2915,6 +2934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcChatPanel: {fileID: 27547417}
   chatTexts:
+  - {fileID: 27547419}
   - {fileID: 27547419}
   endText: {fileID: 0}
   change: 0
@@ -3339,6 +3359,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901619605549485762, guid: 77bb8f8ca0bc05a4580bfc08e839ec37, type: 3}
+      propertyPath: chatTexts.Array.data[1]
+      value: 
+      objectReference: {fileID: 622852307}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3560,7 +3588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: chatTexts.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: chatTexts.Array.data[0]
@@ -3570,6 +3598,14 @@ PrefabInstance:
       propertyPath: chatTexts.Array.data[1]
       value: 
       objectReference: {fileID: 1329312330}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.data[2]
+      value: 
+      objectReference: {fileID: 208819248}
+    - target: {fileID: 4494631872207254293, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: chatTexts.Array.data[3]
+      value: 
+      objectReference: {fileID: 208819248}
     - target: {fileID: 4746187643446180479, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.80555

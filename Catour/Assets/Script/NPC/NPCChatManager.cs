@@ -54,7 +54,7 @@ public class NPCChatManager : MonoBehaviour
         if((scene.getKey() < scene.Require()) || !change){
             HideAllTexts();  // Ẩn tất cả các Text hiện tại
 
-            if (currentTextIndex < chatTexts.Length)
+            if (currentTextIndex < chatTexts.Length - 1)
             {
                 chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
                 currentTextIndex++;
