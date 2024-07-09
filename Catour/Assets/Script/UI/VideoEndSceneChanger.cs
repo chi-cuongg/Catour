@@ -24,7 +24,7 @@ public class VideoEndSceneChanger : MonoBehaviour
 
     void OnVideoEnd(VideoPlayer vp)
     {
-        if(SceneManager.GetActiveScene().buildIndex != 6)
+        if(SceneManager.GetActiveScene().buildIndex != 7)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         else SceneManager.LoadScene(0);
     }

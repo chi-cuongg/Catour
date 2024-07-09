@@ -23,7 +23,7 @@ public class NPCChatManager : MonoBehaviour
 
     void Update()
     {
-        if (npcChatPanel.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F)))
+        if (npcChatPanel.activeSelf && Input.GetKeyDown(KeyCode.Space))
         {
             Input.ResetInputAxes();
             ShowNextText();

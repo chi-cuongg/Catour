@@ -8,6 +8,7 @@ public class ChatText : MonoBehaviour
     public GameObject cat;
     public GameObject panel;
     public TextMeshProUGUI text;
+    private bool isT = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,11 +21,11 @@ public class ChatText : MonoBehaviour
         
     }
 
-    public void Text(string text){
+    public void Text(){
         cat.GetComponent<Controller>().enableControl(false);
         panel.SetActive(true);
         this.text.gameObject.SetActive(true);
-        this.text.text = text;
+        isT = true;
     }
 
     public void endText(){
@@ -33,5 +34,10 @@ public class ChatText : MonoBehaviour
         text.text = "";
         Input.ResetInputAxes();
         cat.GetComponent<Controller>().enableControl(true);
+        isT = false;
+    }
+
+    public bool isText(){
+        return isT;
     }
 }

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Right : MonoBehaviour
 {
     private SceneChange scene;
     private bool triggered = false;
+    public ChatText text;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +23,19 @@ public class Right : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.F)){
                 if(scene.getKey() >= scene.Require()){
                     this.enabled = false;
-                    scene.NextScene();
+                    if(scene != null) scene.NextScene();
                     triggered = false;
-                }else triggered = false;
+                }else{
+                    text.Text();
+                    triggered = false;
+                }
+            }
+        }
+        
+        if(text.isText()){
+            if(Input.GetKeyDown(KeyCode.Space)){
+                text.endText();
+                triggered = true;
             }
         }
     }
