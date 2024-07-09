@@ -8,6 +8,7 @@ public class SceneChange : MonoBehaviour
 {
     public static GameObject scene;
     private int minigame;
+    private GameObject mini;
     private List<GameObject> data = new List<GameObject>();
     private int key = 0;
     private int require = 1;
@@ -44,10 +45,11 @@ public class SceneChange : MonoBehaviour
         trans.SetBool("Trigger", false);
     }
 
-    public void MiniGame(int minigame){
+    public void MiniGame(int minigame, GameObject mini){
         if(minigame >= 0){
             this.minigame = minigame;
             StartCoroutine(Load());
+            this.mini = mini;
         }
     }
     IEnumerator Load(){
@@ -70,6 +72,7 @@ public class SceneChange : MonoBehaviour
 
     public void Return(){
         StartCoroutine(Unload());
+        mini.GetComponent<NPCChatManager>().enabled = true;
     }
 
     IEnumerator Unload(){
@@ -87,7 +90,7 @@ public class SceneChange : MonoBehaviour
 
     public void Restart(){
         Return();
-        MiniGame(minigame);
+        MiniGame(minigame, mini);
     }
 
     public void setKey(){

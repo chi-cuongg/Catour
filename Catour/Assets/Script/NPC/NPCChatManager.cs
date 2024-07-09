@@ -4,7 +4,8 @@ public class NPCChatManager : MonoBehaviour
 {
     public GameObject npcChatPanel;  // Panel chứa nội dung chat
     public GameObject[] chatTexts;  // Mảng chứa các Text component
-
+    public GameObject endText;
+    private bool end = false;
     private int currentTextIndex = 0;
     private bool triggered = false;
     private GameObject cat;
@@ -27,7 +28,7 @@ public class NPCChatManager : MonoBehaviour
             Input.ResetInputAxes();
             ShowNextText();
         }
-
+        
         if (triggered)
         {
             if (cat.GetComponent<Controller>().isControl())
@@ -50,9 +51,9 @@ public class NPCChatManager : MonoBehaviour
 
     void ShowNextText()
     {
-        HideAllTexts();  // Ẩn tất cả các Text hiện tại
-
         if((scene.getKey() < scene.Require()) || !change){
+            HideAllTexts();  // Ẩn tất cả các Text hiện tại
+
             if (currentTextIndex < chatTexts.Length)
             {
                 chatTexts[currentTextIndex].SetActive(true);  // Hiển thị Text tiếp theo
@@ -67,8 +68,18 @@ public class NPCChatManager : MonoBehaviour
 
                 if(scene != null && change){ 
                     this.enabled = false;
-                    scene.MiniGame(minigame);
+                    scene.MiniGame(minigame, this.gameObject);
                 }
+            }
+        }else{
+            if(!end){ 
+                if(endText != null) endText.SetActive(true);
+                end = true;
+            }else{
+                endText.SetActive(false);
+                npcChatPanel.SetActive(false);
+                cat.GetComponent<Controller>().enableControl(true);
+                end = false;
             }
         }
     }
