@@ -23,6 +23,7 @@ public class Fishing : MonoBehaviour
     public FishSprite fishSprite;
     public TextMeshProUGUI text;
     private SceneChange scene;
+    public GameOver gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class Fishing : MonoBehaviour
                 Cat.SetBool("Fishing", fishing);
             
                 if(fishing){ 
+                    gameOver.setStart();
                     fishSprite.gameObject.SetActive(false);
                     text.text = "";
 

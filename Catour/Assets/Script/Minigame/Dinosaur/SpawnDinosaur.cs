@@ -33,7 +33,7 @@ public class SpawnDinosaur : MonoBehaviour
     void Update()
     {
         if(gameOver.isStart()){
-            if(Input.GetKeyUp(KeyCode.Space)){
+            if(Input.GetKeyDown(KeyCode.Space)){
                 StartCoroutine(Spawn());
                 Control.enableControl(true);
                 gameOver.setStart();

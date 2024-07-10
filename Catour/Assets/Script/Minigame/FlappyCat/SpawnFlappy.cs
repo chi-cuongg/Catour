@@ -33,14 +33,12 @@ public class SpawnFlappy : MonoBehaviour
     void Update()
     {
         if(gameOver.isStart()){
-            if(Input.GetKeyUp(KeyCode.Space)){
+            if(Input.GetKeyDown(KeyCode.Space)){
                 StartCoroutine(Spawn());
                 Control.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 Control.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 Control.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
                 Control.enableControl(true);
-                Control.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                Control.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 200);
                 gameOver.setStart();
             }
         }

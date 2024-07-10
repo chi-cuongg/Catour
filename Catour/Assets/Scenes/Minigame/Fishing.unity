@@ -586,6 +586,19 @@ MonoBehaviour:
   attention: {fileID: 1688820931}
   fishSprite: {fileID: 1415312256}
   text: {fileID: 703032089}
+  gameOver: {fileID: 1076716418}
+--- !u!114 &1076716418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076716409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9570d14ea06dd604481071709cc31ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302465138
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +969,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7573695425036984957, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1076716417}
+    - targetCorrespondingSourceObject: {fileID: 7573695425036984957, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1076716418}
   m_SourcePrefab: {fileID: 100100000, guid: b0c176a94b367e24cab550b09e62f236, type: 3}
 --- !u!1 &1688820931
 GameObject:
@@ -1319,6 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c598473146463a54893211174ebaac67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOver: {fileID: 1076716418}
 --- !u!1 &2017224439
 GameObject:
   m_ObjectHideFlags: 0

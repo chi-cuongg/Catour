@@ -10,6 +10,7 @@ public class StickController : MonoBehaviour
     private bool isRotating = false;
     private bool control = true;
     private Controller controller;
+    private GameOver gameOver;
     private Vector3 axisPoint;
     private SpawnObject spawn;
     private GameObject cat;
@@ -19,6 +20,7 @@ public class StickController : MonoBehaviour
         spawn = GameObject.Find("GameManager").GetComponent<SpawnObject>();
         cat = GameObject.Find("Cat");
         controller = cat.GetComponent<Controller>();
+        gameOver = spawn.gameObject.GetComponent<GameOver>();
     }
 
     void Update()
@@ -26,10 +28,11 @@ public class StickController : MonoBehaviour
         if(control && controller.isControl()){
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                gameOver.setStart();
                 isExtending = true;
             }
 
-            if (Input.GetKeyUp(KeyCode.Space))
+            if (Input.GetKeyUp(KeyCode.Space) && !gameOver.isStart())
             {
                 float height = (gameObject.GetComponent<BoxCollider2D>().size.y * transform.localScale.y) / 2;
                 axisPoint = transform.position - new Vector3(0, height, 0);

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StartText : MonoBehaviour
 {
+    public GameOver gameOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,7 @@ public class StartText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(!gameOver.isStart()){
             this.gameObject.SetActive(false);
         }
     }

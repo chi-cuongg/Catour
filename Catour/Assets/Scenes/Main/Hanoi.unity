@@ -3906,7 +3906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6000364078288968229, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_UiScaleMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6000364078288968229, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_MatchWidthOrHeight
@@ -3915,6 +3915,10 @@ PrefabInstance:
     - target: {fileID: 6000364078288968229, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1366
+      objectReference: {fileID: 0}
+    - target: {fileID: 6000364078288968229, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 768
       objectReference: {fileID: 0}
     - target: {fileID: 7265099098415974011, guid: e008df46f1a9dae4da6414a254d6ad96, type: 3}
       propertyPath: m_IsActive
